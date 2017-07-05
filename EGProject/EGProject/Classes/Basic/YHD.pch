@@ -1,0 +1,27 @@
+//
+//  YHD.pch
+//  YHD
+//
+//  Created by EG on 2017/6/30.
+//  Copyright © 2017年 EGMade. All rights reserved.
+//
+
+#ifndef YHD_pch
+#define YHD_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#ifdef DEBUG
+#define NSLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#define NSLog(fmt, ...)
+#endif
+
+
+    //随机色
+#define RANDOM_COLOR [UIColor colorWithRed:(arc4random_uniform(256))/255.0 green:(arc4random_uniform(256))/255.0 blue:(arc4random_uniform(256))/255.0 alpha:1.0]
+
+
+#endif /* YHD_pch */
