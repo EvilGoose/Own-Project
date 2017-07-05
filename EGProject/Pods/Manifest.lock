@@ -1,0 +1,18 @@
+PODS:
+  - Masonry (1.0.2)
+  - MBProgressHUD (0.9.2)
+  - MJRefresh (3.1.12)
+
+DEPENDENCIES:
+  - Masonry (~> 1.0.0)
+  - MBProgressHUD (~> 0.9.1)
+  - MJRefresh (~> 3.1.7)
+
+SPEC CHECKSUMS:
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+
+PODFILE CHECKSUM: 09e81d20d6bd95d74276c7cf2b796830a8bf3565
+
+COCOAPODS: 1.2.0.beta.1
