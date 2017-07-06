@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		370B4599AA384A5AE931750F /* libPods-EGProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5436C5440DC9FEC413DCE1 /* libPods-EGProject.a */; };
 		B3277A908061E0D1B3A7BEEA /* libPods-EGProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E97E4415D633ABF5111C04AA /* libPods-EGProjectTests.a */; };
+		C46A37D91F0E553C009B0F37 /* NSArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C46A37D61F0E553C009B0F37 /* NSArray+Extension.m */; };
+		C46A37DA1F0E553C009B0F37 /* NSDictionary+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C46A37D81F0E553C009B0F37 /* NSDictionary+Extension.m */; };
+		C46A37DD1F0E55E8009B0F37 /* UIColor+PDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C46A37DC1F0E55E8009B0F37 /* UIColor+PDExtension.m */; };
+		C46A37E11F0E57F5009B0F37 /* EGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C46A37E01F0E57F5009B0F37 /* EGNavigationController.m */; };
 		C4D95A561F0C70B60058F4DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D95A551F0C70B60058F4DF /* main.m */; };
 		C4D95A591F0C70B60058F4DF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D95A581F0C70B60058F4DF /* AppDelegate.m */; };
 		C4D95A611F0C70B60058F4DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4D95A601F0C70B60058F4DF /* Assets.xcassets */; };
@@ -48,6 +52,17 @@
 		8D5436C5440DC9FEC413DCE1 /* libPods-EGProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EGProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A17F8352A51A27CB4C5A1BD7 /* Pods-EGProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EGProjectTests/Pods-EGProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		A98F6E4E5E5FF6BAFDF37C4E /* Pods-EGProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EGProjectUITests/Pods-EGProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C46A37CF1F0E5358009B0F37 /* UIConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIConstants.h; sourceTree = "<group>"; };
+		C46A37D01F0E536D009B0F37 /* Notifications.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Notifications.h; sourceTree = "<group>"; };
+		C46A37D11F0E53A8009B0F37 /* Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
+		C46A37D51F0E553C009B0F37 /* NSArray+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extension.h"; sourceTree = "<group>"; };
+		C46A37D61F0E553C009B0F37 /* NSArray+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extension.m"; sourceTree = "<group>"; };
+		C46A37D71F0E553C009B0F37 /* NSDictionary+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Extension.h"; sourceTree = "<group>"; };
+		C46A37D81F0E553C009B0F37 /* NSDictionary+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Extension.m"; sourceTree = "<group>"; };
+		C46A37DB1F0E55E8009B0F37 /* UIColor+PDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+PDExtension.h"; sourceTree = "<group>"; };
+		C46A37DC1F0E55E8009B0F37 /* UIColor+PDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PDExtension.m"; sourceTree = "<group>"; };
+		C46A37DF1F0E57F5009B0F37 /* EGNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGNavigationController.h; sourceTree = "<group>"; };
+		C46A37E01F0E57F5009B0F37 /* EGNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGNavigationController.m; sourceTree = "<group>"; };
 		C4D95A511F0C70B60058F4DF /* EGProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EGProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D95A551F0C70B60058F4DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C4D95A571F0C70B60058F4DF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -136,6 +151,46 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C46A37D21F0E5508009B0F37 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				C46A37D51F0E553C009B0F37 /* NSArray+Extension.h */,
+				C46A37D61F0E553C009B0F37 /* NSArray+Extension.m */,
+				C46A37D71F0E553C009B0F37 /* NSDictionary+Extension.h */,
+				C46A37D81F0E553C009B0F37 /* NSDictionary+Extension.m */,
+				C46A37DB1F0E55E8009B0F37 /* UIColor+PDExtension.h */,
+				C46A37DC1F0E55E8009B0F37 /* UIColor+PDExtension.m */,
+				C46A37D31F0E5508009B0F37 /* Abstract */,
+				C46A37D41F0E5508009B0F37 /* UI */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		C46A37D31F0E5508009B0F37 /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Abstract;
+			sourceTree = "<group>";
+		};
+		C46A37D41F0E5508009B0F37 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C46A37DE1F0E56DD009B0F37 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C4D95A8E1F0C73010058F4DF /* YHD.pch */,
+				C46A37CF1F0E5358009B0F37 /* UIConstants.h */,
+				C46A37D01F0E536D009B0F37 /* Notifications.h */,
+				C46A37D11F0E53A8009B0F37 /* Defines.h */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
 		C4D95A481F0C70B60058F4DF = {
 			isa = PBXGroup;
 			children = (
@@ -216,8 +271,8 @@
 		C4D95A881F0C73010058F4DF /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				C46A37DE1F0E56DD009B0F37 /* Constants */,
 				C4D95A891F0C73010058F4DF /* View */,
-				C4D95A8E1F0C73010058F4DF /* YHD.pch */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -229,6 +284,8 @@
 				C4D95A8B1F0C73010058F4DF /* EGBasicViewController.m */,
 				C4D95A8C1F0C73010058F4DF /* EGRootTabController.h */,
 				C4D95A8D1F0C73010058F4DF /* EGRootTabController.m */,
+				C46A37DF1F0E57F5009B0F37 /* EGNavigationController.h */,
+				C46A37E01F0E57F5009B0F37 /* EGNavigationController.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -329,6 +386,7 @@
 		C4D95AA61F0C73010058F4DF /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C46A37D21F0E5508009B0F37 /* Category */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -626,6 +684,7 @@
 			files = (
 				C4D95AA91F0C73010058F4DF /* EGHomeViewController.m in Sources */,
 				C4D95A591F0C70B60058F4DF /* AppDelegate.m in Sources */,
+				C46A37DA1F0E553C009B0F37 /* NSDictionary+Extension.m in Sources */,
 				C4D95AAD1F0C73010058F4DF /* EGTestFunctionsController.m in Sources */,
 				C4D95AAE1F0C73010058F4DF /* EGUserController.m in Sources */,
 				C4D95A561F0C70B60058F4DF /* main.m in Sources */,
@@ -633,6 +692,9 @@
 				C4D95AA81F0C73010058F4DF /* EGRootTabController.m in Sources */,
 				C4D95AAC1F0C73010058F4DF /* EGShoppingCarController.m in Sources */,
 				C4D95AAA1F0C73010058F4DF /* EGRecommendController.m in Sources */,
+				C46A37D91F0E553C009B0F37 /* NSArray+Extension.m in Sources */,
+				C46A37E11F0E57F5009B0F37 /* EGNavigationController.m in Sources */,
+				C46A37DD1F0E55E8009B0F37 /* UIColor+PDExtension.m in Sources */,
 				C4D95AAB1F0C73010058F4DF /* EGSelectController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
