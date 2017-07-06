@@ -27,6 +27,7 @@
 		C4D95AAC1F0C73010058F4DF /* EGShoppingCarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D95A9A1F0C73010058F4DF /* EGShoppingCarController.m */; };
 		C4D95AAD1F0C73010058F4DF /* EGTestFunctionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D95AA01F0C73010058F4DF /* EGTestFunctionsController.m */; };
 		C4D95AAE1F0C73010058F4DF /* EGUserController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D95AA31F0C73010058F4DF /* EGUserController.m */; };
+		C4F69E381F0E6BB000F3F359 /* scan_success.wav in Resources */ = {isa = PBXBuildFile; fileRef = C4F69E371F0E6BB000F3F359 /* scan_success.wav */; };
 		C598291833CCF5F64DD1AC41 /* libPods-EGProjectUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5932B408CEB749223A6661 /* libPods-EGProjectUITests.a */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		C4D95AA01F0C73010058F4DF /* EGTestFunctionsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGTestFunctionsController.m; sourceTree = "<group>"; };
 		C4D95AA21F0C73010058F4DF /* EGUserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGUserController.h; sourceTree = "<group>"; };
 		C4D95AA31F0C73010058F4DF /* EGUserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGUserController.m; sourceTree = "<group>"; };
+		C4F69E371F0E6BB000F3F359 /* scan_success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = scan_success.wav; sourceTree = "<group>"; };
 		D2708E533CFA0CA5D1C47C18 /* Pods-EGProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-EGProject/Pods-EGProject.release.xcconfig"; sourceTree = "<group>"; };
 		D400CE82038D6DE093148400 /* Pods-EGProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EGProjectTests/Pods-EGProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DBB41D69B4A0EA14AD384518 /* Pods-EGProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EGProjectUITests/Pods-EGProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -191,6 +193,13 @@
 			name = Constants;
 			sourceTree = "<group>";
 		};
+		C46A37E21F0E66A9009B0F37 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		C4D95A481F0C70B60058F4DF = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +272,7 @@
 				C4D95A981F0C73010058F4DF /* ShoppingCar */,
 				C4D95A9E1F0C73010058F4DF /* Tests */,
 				C4D95AA11F0C73010058F4DF /* User */,
+				C46A37E21F0E66A9009B0F37 /* Login */,
 				C4D95AA41F0C73010058F4DF /* Welcome */,
 			);
 			path = Classes;
@@ -378,6 +388,7 @@
 		C4D95AA51F0C73010058F4DF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C4F69E371F0E6BB000F3F359 /* scan_success.wav */,
 				C4D95A601F0C70B60058F4DF /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -520,6 +531,7 @@
 			files = (
 				C4D95A641F0C70B60058F4DF /* LaunchScreen.storyboard in Resources */,
 				C4D95A611F0C70B60058F4DF /* Assets.xcassets in Resources */,
+				C4F69E381F0E6BB000F3F359 /* scan_success.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
