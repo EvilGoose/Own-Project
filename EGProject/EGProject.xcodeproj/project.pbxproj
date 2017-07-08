@@ -270,10 +270,10 @@
 				C4D95A921F0C73010058F4DF /* Recommends */,
 				C4D95A951F0C73010058F4DF /* Select */,
 				C4D95A981F0C73010058F4DF /* ShoppingCar */,
-				C4D95A9E1F0C73010058F4DF /* Tests */,
 				C4D95AA11F0C73010058F4DF /* User */,
 				C46A37E21F0E66A9009B0F37 /* Login */,
 				C4D95AA41F0C73010058F4DF /* Welcome */,
+				C4D95A9E1F0C73010058F4DF /* Tests */,
 			);
 			path = Classes;
 			sourceTree = "<group>";

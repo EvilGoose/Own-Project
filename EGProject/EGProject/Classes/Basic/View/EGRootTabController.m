@@ -36,15 +36,30 @@
 }
 
 - (void)initChildControllers {
-    [self addChildViewController:[self addChildViewController:[EGHomeViewController new] title:@"主页" imageName:@"Home_default" selectedImageName:@"Home_selected"]];
+    [self addChildViewController:[self addChildViewController:[EGHomeViewController new]
+                                                        title:@"首页"
+                                                    imageName:@"Home_default"
+                                            selectedImageName:@"Home_selected"]];
     
-    [self addChildViewController:[self addChildViewController:[EGSelectController new] title:@"精选" imageName:@"Media_default" selectedImageName:@"Media_selected"]];
+    [self addChildViewController:[self addChildViewController:[EGSelectController new]
+                                                        title:@"专题"
+                                                    imageName:@"Media_default"
+                                            selectedImageName:@"Media_selected"]];
     
-    [self addChildViewController:[self addChildViewController:[EGRecommendController new] title:@"推荐" imageName:@"Craft" selectedImageName:@""]];
+    [self addChildViewController:[self addChildViewController:[EGRecommendController new]
+                                                        title:@"分类"
+                                                    imageName:@"Craft"
+                                            selectedImageName:@""]];
     
-    [self addChildViewController:[self addChildViewController:[EGShoppingCarController new] title:@"商城" imageName:@"Record_default" selectedImageName:@"Record_selected"]];
+    [self addChildViewController:[self addChildViewController:[EGShoppingCarController new]
+                                                        title:@"购物车"
+                                                    imageName:@"Record_default"
+                                            selectedImageName:@"Record_selected"]];
     
-    [self addChildViewController:[self addChildViewController:[EGUserController new] title:@"我的" imageName:@"User_default" selectedImageName:@"User_selected"]];
+    [self addChildViewController:[self addChildViewController:[EGUserController new]
+                                                        title:@"个人"
+                                                    imageName:@"User_default"
+                                            selectedImageName:@"User_selected"]];
     
 }
 

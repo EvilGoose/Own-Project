@@ -9,6 +9,22 @@
 #import "EGShoppingCarController.h"
 
 @interface EGShoppingCarController ()
+<
+UICollectionViewDelegate,
+UICollectionViewDataSource
+>
+
+/**已购列表*/
+@property (strong, nonatomic)NSMutableArray *choosedGoods;
+
+/**相关列表*/
+@property (strong, nonatomic)NSMutableArray *relatedGoods;
+
+/**推荐列表*/
+@property (strong, nonatomic)NSMutableArray *recommendGoods;
+
+/**展示列表*/
+@property (strong, nonatomic)UICollectionView *presentTableView;
 
 @end
 
@@ -19,19 +35,22 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)configureNavigationItem:(UINavigationItem *)item NavigationBar:(UINavigationBar *)bar {
+    item.title = @"购物车";
+    
+    item.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"编辑" style:UIBarButtonItemStylePlain target:self action:@selector(editShoppingCar)];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)editShoppingCar {
+    NSLog(@"编辑购物车")
 }
-*/
+
+#pragma mark - setter
+
+
+#pragma mark - data source
+
+
+#pragma mark - lazy
 
 @end
