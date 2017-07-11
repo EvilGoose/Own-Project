@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		370B4599AA384A5AE931750F /* libPods-EGProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5436C5440DC9FEC413DCE1 /* libPods-EGProject.a */; };
 		B3277A908061E0D1B3A7BEEA /* libPods-EGProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E97E4415D633ABF5111C04AA /* libPods-EGProjectTests.a */; };
+		C442CD021F149EB400947616 /* EGGoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C442CD011F149EB400947616 /* EGGoodsModel.m */; };
 		C4446C0A1F10DCA5007431E8 /* EGShoppingCarRecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4446C091F10DCA5007431E8 /* EGShoppingCarRecommendCell.m */; };
 		C4446C0D1F10DD7C007431E8 /* EGShoppingCarChoosedGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4446C0C1F10DD7C007431E8 /* EGShoppingCarChoosedGoodsCell.m */; };
 		C46A37D91F0E553C009B0F37 /* NSArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C46A37D61F0E553C009B0F37 /* NSArray+Extension.m */; };
@@ -55,6 +56,8 @@
 		8D5436C5440DC9FEC413DCE1 /* libPods-EGProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EGProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A17F8352A51A27CB4C5A1BD7 /* Pods-EGProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EGProjectTests/Pods-EGProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		A98F6E4E5E5FF6BAFDF37C4E /* Pods-EGProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EGProjectUITests/Pods-EGProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C442CD001F149EB400947616 /* EGGoodsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGGoodsModel.h; sourceTree = "<group>"; };
+		C442CD011F149EB400947616 /* EGGoodsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGGoodsModel.m; sourceTree = "<group>"; };
 		C4446C081F10DCA5007431E8 /* EGShoppingCarRecommendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGShoppingCarRecommendCell.h; sourceTree = "<group>"; };
 		C4446C091F10DCA5007431E8 /* EGShoppingCarRecommendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGShoppingCarRecommendCell.m; sourceTree = "<group>"; };
 		C4446C0B1F10DD7C007431E8 /* EGShoppingCarChoosedGoodsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGShoppingCarChoosedGoodsCell.h; sourceTree = "<group>"; };
@@ -348,6 +351,8 @@
 		C4D95A9B1F0C73010058F4DF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C442CD001F149EB400947616 /* EGGoodsModel.h */,
+				C442CD011F149EB400947616 /* EGGoodsModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -704,6 +709,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C442CD021F149EB400947616 /* EGGoodsModel.m in Sources */,
 				C4D95AA91F0C73010058F4DF /* EGHomeViewController.m in Sources */,
 				C4D95A591F0C70B60058F4DF /* AppDelegate.m in Sources */,
 				C46A37DA1F0E553C009B0F37 /* NSDictionary+Extension.m in Sources */,

@@ -45,7 +45,16 @@ UITableViewDelegate
 }
 
 - (void)editShoppingCar {
-    NSLog(@"编辑购物车")
+//    NSLog(@"编辑购物车")
+}
+
+#pragma mark - request data
+
+- (void)requestYouMayLikeList {
+}
+
+- (void)requestRelatedList {
+    
 }
 
 #pragma mark - setter

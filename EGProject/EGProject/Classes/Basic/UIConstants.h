@@ -18,16 +18,68 @@
     //屏幕bounds
 #define SCREEN_BOUNDS ([UIScreen mainScreen].bounds)
 
+    //导航栏高度
+#define NAVIGATION_BAR_HEIGHT 64
+
+    // 顶部间隔
+#define TOP_MARGIN 10
+
+    // 底部间隔
+#define BOTTOM_MARGIN 10
+
+    // 左间隔
+#define LEFT_MARGIN 10
+
+    //右边间隔
+#define RIGHT_MARGIN 10
+
     //RGBA 颜色
 #define RGBA_COLOR(redNum, greenNum, blueNum, delta)  [UIColor colorWithRed:(redNum)/255.0 green:(greenNum)/255.0 blue:(blueNum)/255.0 alpha:(delta)]
 
     //随机色
-#define RANDOM_COLOR [UIColor colorWithRed:(arc4random_uniform(256))/255.0 green:(arc4random_uniform(256))/255.0 blue:(arc4random_uniform(256))/255.0 alpha:1.0]
+#define RANDOM_COLOR RGBA_COLOR(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256), 1)
+
+    //调试色
+#ifdef DEBUG
+#define DEBUG_COLOR RANDOM_COLOR
+#else
+#define DEBUG_COLOR CLEAR_COLOR
+#endif
+
+    //主题字体色
+#define TEXT_MAIN_COLOR [UIColor darkGrayColor]
 
     //透明色
 #define CLEAR_COLOR [UIColor clearColor]
 
-    //导航栏高度
-#define NAVIGATION_BAR_HEIGHT 64
+    //白色
+#define WHITE_COLOR [UIColor whiteColor]
+
+    //黑色
+#define BLACK_COLOR [UIColor blackColor]
+
+    //红色
+#define RED_COLOR [UIColor redColor]
+
+    //黄色
+#define YELLOW_COLOR [UIColor yellowColor]
+
+    //绿色
+#define GREEN_COLOR [UIColor greenColor]
+
+    //橙色
+#define ORANGE_COLOR [UIColor orangeColor]
+
+    //蓝色
+#define BLUE_COLOR [UIColor blueColor]
+
+    //紫色
+#define PURPLE_COLOR [UIColor purpleColor]
+
+    //灰色
+#define GRAY_COLOR [UIColor grayColor]
+
+    //棕色
+#define BROWN_COLOR [UIColor brownColor]
 
 #endif /* UIConstants_h */
