@@ -8,6 +8,7 @@
 
 #import "EGHomeViewController.h"
 #import "EGGoodsPresentController.h"
+#import "UIBarButtonItem+BarButtonItemWithButton.h"
 
 @interface EGHomeViewController ()
 
@@ -23,6 +24,17 @@
 
 - (void)configureNavigationItem:(UINavigationItem *)item NavigationBar:(UINavigationBar *)bar {
     item.title = @"HOME";
+    item.leftBarButtonItem = [UIBarButtonItem barButtonItemWithCustomImageName:@"" hightlightedImage:nil forTarget:self WithAction:@selector(scanAction)];
+    item.rightBarButtonItem = [UIBarButtonItem barButtonItemWithCustomImageName:@"homepage_messages_ic_18x18_" hightlightedImage:nil forTarget:self WithAction:@selector(reviewMessageAction)];
+    
+}
+
+- (void)scanAction {
+
+}
+
+- (void)reviewMessageAction {
+    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

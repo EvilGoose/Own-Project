@@ -23,6 +23,7 @@
 		C48A0E921F17A345003BEAC1 /* EGGoodsPresentController.m in Sources */ = {isa = PBXBuildFile; fileRef = C48A0E911F17A345003BEAC1 /* EGGoodsPresentController.m */; };
 		C48A0E951F17A805003BEAC1 /* EGSearchGoodsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C48A0E941F17A805003BEAC1 /* EGSearchGoodsController.m */; };
 		C48A0E981F17A82F003BEAC1 /* EGHomeNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C48A0E971F17A82F003BEAC1 /* EGHomeNavigationBar.m */; };
+		C48A0E9B1F17AA81003BEAC1 /* UIBarButtonItem+BarButtonItemWithButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C48A0E9A1F17AA81003BEAC1 /* UIBarButtonItem+BarButtonItemWithButton.m */; };
 		C4D95A561F0C70B60058F4DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D95A551F0C70B60058F4DF /* main.m */; };
 		C4D95A591F0C70B60058F4DF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D95A581F0C70B60058F4DF /* AppDelegate.m */; };
 		C4D95A611F0C70B60058F4DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4D95A601F0C70B60058F4DF /* Assets.xcassets */; };
@@ -94,6 +95,8 @@
 		C48A0E941F17A805003BEAC1 /* EGSearchGoodsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGSearchGoodsController.m; sourceTree = "<group>"; };
 		C48A0E961F17A82F003BEAC1 /* EGHomeNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGHomeNavigationBar.h; sourceTree = "<group>"; };
 		C48A0E971F17A82F003BEAC1 /* EGHomeNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGHomeNavigationBar.m; sourceTree = "<group>"; };
+		C48A0E991F17AA81003BEAC1 /* UIBarButtonItem+BarButtonItemWithButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+BarButtonItemWithButton.h"; sourceTree = "<group>"; };
+		C48A0E9A1F17AA81003BEAC1 /* UIBarButtonItem+BarButtonItemWithButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+BarButtonItemWithButton.m"; sourceTree = "<group>"; };
 		C4D95A511F0C70B60058F4DF /* EGProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EGProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D95A551F0C70B60058F4DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C4D95A571F0C70B60058F4DF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -217,6 +220,8 @@
 		C46A37D41F0E5508009B0F37 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C48A0E991F17AA81003BEAC1 /* UIBarButtonItem+BarButtonItemWithButton.h */,
+				C48A0E9A1F17AA81003BEAC1 /* UIBarButtonItem+BarButtonItemWithButton.m */,
 				C48A0E841F176698003BEAC1 /* UIView+Extension.h */,
 				C48A0E851F176698003BEAC1 /* UIView+Extension.m */,
 				C48A0E8D1F177594003BEAC1 /* UITableViewCell+CaculateHeight.h */,
@@ -765,6 +770,7 @@
 				C4D95A561F0C70B60058F4DF /* main.m in Sources */,
 				C48A0E981F17A82F003BEAC1 /* EGHomeNavigationBar.m in Sources */,
 				C4446C0A1F10DCA5007431E8 /* EGShoppingCarRecommendCell.m in Sources */,
+				C48A0E9B1F17AA81003BEAC1 /* UIBarButtonItem+BarButtonItemWithButton.m in Sources */,
 				C48A0E951F17A805003BEAC1 /* EGSearchGoodsController.m in Sources */,
 				C4D95AA71F0C73010058F4DF /* EGBasicViewController.m in Sources */,
 				C463E68D1F1744F000C22840 /* EGControllerTransitionManager.m in Sources */,
