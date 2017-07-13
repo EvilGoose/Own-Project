@@ -7,7 +7,7 @@
 //
 
 #import "EGHomeViewController.h"
-#import "EGTestFunctionsController.h"
+#import "EGGoodsPresentController.h"
 
 @interface EGHomeViewController ()
 
@@ -26,8 +26,7 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    EGTestFunctionsController *new = [[EGTestFunctionsController alloc]init];
-    [self presentViewController:new animated:YES completion:nil];
- }
+    [self.navigationController pushViewController:[EGGoodsPresentController new] animated:YES];
+}
 
 @end

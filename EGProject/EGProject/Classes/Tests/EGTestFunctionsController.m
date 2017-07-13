@@ -27,6 +27,10 @@ UIViewControllerTransitioningDelegate
     return self;
 }
 
+- (void)configureNavigationItem:(UINavigationItem *)item NavigationBar:(UINavigationBar *)bar {
+    bar.hidden = YES;
+}
+
 #pragma mark - transition
 
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {

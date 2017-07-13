@@ -42,12 +42,17 @@
 }
 
 - (void)initSubviews {
-    [self addSubview:self.userIcon];
-    [self addSubview:self.nameLabel];
-    [self addSubview:self.stateButton];
-    [self addSubview:self.codeImage];
-    [self addSubview:self.listLable];
-    [self addSubview:self.arrowImage];
+    [self.contentView addSubview:self.userIcon];
+    [self.contentView addSubview:self.nameLabel];
+    [self.contentView addSubview:self.stateButton];
+    [self.contentView addSubview:self.codeImage];
+    [self.contentView addSubview:self.listLable];
+    [self.contentView addSubview:self.arrowImage];
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
 }
 
 @end
