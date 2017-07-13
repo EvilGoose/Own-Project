@@ -1,2 +1,2 @@
-# Demo For NetEasy APP "严选"
+#A NetEasy APP Learning Demo 
 Try something
