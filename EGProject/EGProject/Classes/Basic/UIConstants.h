@@ -82,4 +82,11 @@
     //棕色
 #define BROWN_COLOR [UIColor brownColor]
 
+    //系统字体
+#define DEFAULT_FONT [UIFont systemFontOfSize:14]
+
+#define SYSTEM_BOLD_FONT(size) [UIFont boldSystemFontOfSize:size]
+
+#define SYSTEM_FONT(size) [UIFont systemFontOfSize:size]
+
 #endif /* UIConstants_h */

@@ -21,5 +21,20 @@
 
 #define IPAD [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad
 
+    //获取系统对象
+#define KEY_WINDOW [UIApplication sharedApplication].keyWindow
+
+#define APPLICATION [UIApplication sharedApplication]
+
+#define APPDELEGATE [AppDelegate shareAppDelegate]
+
+#define APPLICATION_ROOT_VIEW_CONTROLLER [UIApplication sharedApplication].delegate.window.rootViewController
+
+#define USER_DEFAULTS [NSUserDefaults standardUserDefaults]
+
+#define NOTIFICATION_CENTER [NSNotificationCenter defaultCenter]
+
+#define NOTIFICATION(class, fuction) [NSString stringWithFormat:@"Notification_%@_%@", class, fuction]  
+
 
 #endif /* Defines_h */

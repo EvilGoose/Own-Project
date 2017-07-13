@@ -40,7 +40,6 @@ UITableViewDelegate
 
 - (void)configureNavigationItem:(UINavigationItem *)item NavigationBar:(UINavigationBar *)bar {
     item.title = @"购物车";
-    
     item.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"编辑" style:UIBarButtonItemStylePlain target:self action:@selector(editShoppingCar)];
 }
 

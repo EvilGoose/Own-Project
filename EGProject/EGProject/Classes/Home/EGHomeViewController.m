@@ -7,6 +7,7 @@
 //
 
 #import "EGHomeViewController.h"
+#import "EGTestFunctionsController.h"
 
 @interface EGHomeViewController ()
 
@@ -17,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
 }
 
 - (void)configureNavigationItem:(UINavigationItem *)item NavigationBar:(UINavigationBar *)bar {
@@ -24,8 +26,8 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    EGBasicViewController *new = [EGBasicViewController new];
-    [self.navigationController pushViewController:new animated:YES];
-}
+    EGTestFunctionsController *new = [[EGTestFunctionsController alloc]init];
+    [self presentViewController:new animated:YES completion:nil];
+ }
 
 @end
