@@ -14,6 +14,9 @@
 #import <Masonry.h>
 
 @interface EGBasicViewController ()
+<
+UINavigationControllerDelegate
+>
 
 @end
 
@@ -78,6 +81,10 @@
     NSLog(@"%@ %s", self.class, __func__)
 }
 
+#pragma mark - navigation animation delegate
+
+
+
 #pragma mark - lazy
 
 - (UINavigationItem *)customNavigationItem {
@@ -109,5 +116,6 @@
     }
     return _bottomSeperator;
 }
+
 
 @end

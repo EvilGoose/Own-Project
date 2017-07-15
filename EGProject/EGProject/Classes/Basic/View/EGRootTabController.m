@@ -11,7 +11,7 @@
 #import "EGNavigationController.h"
 #import "EGHomeViewController.h"
 #import "EGSelectController.h"
-#import "EGRecommendController.h"
+#import "EGSpecialController.h"
 #import "EGShoppingCarController.h"
 #import "EGUserController.h"
 
@@ -41,15 +41,15 @@
                                                     imageName:@"Home_default"
                                             selectedImageName:@"Home_selected"]];
     
-    [self addChildViewController:[self addChildViewController:[EGSelectController new]
-                                                        title:@"专题"
+    [self addChildViewController:[self addChildViewController:[EGSpecialController new]
+                                                        title:@"分类"
                                                     imageName:@"Media_default"
                                             selectedImageName:@"Media_selected"]];
-    
-    [self addChildViewController:[self addChildViewController:[EGRecommendController new]
-                                                        title:@"分类"
+
+    [self addChildViewController:[self addChildViewController:[EGSelectController new]
+                                                        title:@"专题"
                                                     imageName:@"Craft"
-                                            selectedImageName:@""]];
+                                            selectedImageName:@""]];                                  
     
     [self addChildViewController:[self addChildViewController:[EGShoppingCarController new]
                                                         title:@"购物车"

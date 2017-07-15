@@ -21,6 +21,9 @@
     //导航栏高度
 #define NAVIGATION_BAR_HEIGHT 64
 
+    //Tab bar 高度
+#define TAB_BAR_HEIGHT 49
+
     // 顶部间隔
 #define TOP_MARGIN 10
 

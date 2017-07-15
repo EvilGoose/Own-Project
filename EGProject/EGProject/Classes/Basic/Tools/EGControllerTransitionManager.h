@@ -12,10 +12,18 @@
 typedef enum : NSUInteger {
     ControllerTransitionTypePresent,
     ControllerTransitionTypeDismiss,
+    ControllerTransitionTypePush,
+    ControllerTransitionTypePop
 } ControllerTransitionType;
 
 @interface EGControllerTransitionManager : NSObject
 <UIViewControllerAnimatedTransitioning>
+
+/**展示时间*/
+@property (assign, nonatomic)CGFloat presentDuration;
+
+/**消失时间*/
+@property (assign, nonatomic)CGFloat dismissDuration;
 
 + (EGControllerTransitionManager *)transmisionWithTransisionType:(ControllerTransitionType)type;
 

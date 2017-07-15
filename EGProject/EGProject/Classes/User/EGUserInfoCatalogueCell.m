@@ -28,7 +28,8 @@
 /**箭头*/
 @property (strong, nonatomic)UIImageView *arrowImage;
 
-
+/**选项板*/
+@property (strong, nonatomic)UIView *optionsView;
 
 @end
 
@@ -48,11 +49,64 @@
     [self.contentView addSubview:self.codeImage];
     [self.contentView addSubview:self.listLable];
     [self.contentView addSubview:self.arrowImage];
+    [self.contentView addSubview:self.optionsView];
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
     
 }
+
+#pragma mark - lazy
+
+- (UIImageView *)userIcon {
+    if (!_userIcon) {
+        _userIcon = [[UIImageView alloc]initWithFrame:CGRectZero];
+    }
+    return _userIcon;
+}
+
+- (UILabel *)nameLabel {
+    if (!_nameLabel) {
+        _nameLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    }
+    return _nameLabel;
+}
+
+- (UIButton *)stateButton {
+    if (!_stateButton) {
+        _stateButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    }
+    return _stateButton;
+}
+
+- (UIImageView *)codeImage {
+    if (!_codeImage) {
+        _codeImage = [[UIImageView alloc] initWithFrame:CGRectZero];
+    }
+    return _codeImage;
+}
+
+- (UILabel *)listLable {
+    if (!_listLable) {
+        _listLable = [[UILabel alloc] initWithFrame:CGRectZero];
+    }
+    return _listLable;
+}
+
+- (UIImageView *)arrowImage {
+    if (!_arrowImage) {
+        _arrowImage = [[UIImageView alloc] initWithFrame:CGRectZero];
+    }
+    return _arrowImage;
+}
+
+- (UIView *)optionsView {
+    if (!_optionsView) {
+        _optionsView = [[UIView alloc] initWithFrame:CGRectZero];
+    }
+    return _optionsView;
+}
+
 
 @end
