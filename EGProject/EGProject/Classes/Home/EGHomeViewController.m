@@ -20,6 +20,10 @@
 #define OPTIONS_VIEW_HEIGHT 30
 
 @interface EGHomeViewController ()
+<
+OptionsViewDelegate,
+OptionsViewDataSource
+>
 
 /**选项板*/
 @property (strong, nonatomic)EGOptionsView *optionsView;
@@ -111,6 +115,16 @@
     
 }
 
+#pragma mark - options view delegate & data source
+
+- (void)optionsView:(EGOptionsView *)optionsView didSelected:(NSInteger)index {
+    NSLog(@"%ld", (long)index)
+}
+
+- (NSArray *)setDataSourceOptionView:(EGOptionsView *)optionsView {
+    return @[@"标题1", @"标题2", @"标题3", @"标题1", @"标题2", @"标题3", @"标题1", @"标题2", @"标题3"];
+}
+
 #pragma mark - lazy
 
 - (UIScrollView *)containerView {
@@ -125,6 +139,8 @@
     if (!_optionsView) {
         _optionsView = [[EGOptionsView alloc]initWithFrame:CGRectMake(0, NAVIGATION_BAR_HEIGHT, SCREEN_WIDTH, OPTIONS_VIEW_HEIGHT)];
         _optionsView.backgroundColor = DEBUG_COLOR;
+        _optionsView.delegate = self;
+        _optionsView.dataSource = self;
     }
     return _optionsView;
 }

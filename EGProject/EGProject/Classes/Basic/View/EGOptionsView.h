@@ -13,7 +13,26 @@
 
 @end
 
+@class EGOptionsView;
+
+@protocol OptionsViewDelegate <NSObject>
+
+- (void)optionsView:(EGOptionsView *)optionsView didSelected:(NSInteger)index;
+
+@end
+
+@protocol OptionsViewDataSource <NSObject>
+
+- (NSArray *)setDataSourceOptionView:(EGOptionsView *)optionsView;
+
+@end
 
 @interface EGOptionsView : UIView
+
+/**delegate*/
+@property (weak, nonatomic)id<OptionsViewDelegate> delegate;
+
+/**data source*/
+@property (weak, nonatomic)id<OptionsViewDataSource> dataSource;
 
 @end
