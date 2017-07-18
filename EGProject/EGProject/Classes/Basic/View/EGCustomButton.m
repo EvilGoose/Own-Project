@@ -36,7 +36,7 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    if (self.imageName) {
+    if (self.imageName) {        
         [self.customImageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.centerX.equalTo(self);
         }];
@@ -66,7 +66,6 @@
     self.subTitleLable.text = subTitle;
     [self.subTitleLable sizeToFit];
     [self addSubview:self.subTitleLable];
-    [self setNeedsLayout];
 }
 
 - (void)setMainTitle:(NSString *)mainTitle {
@@ -74,8 +73,7 @@
     self.mainTitleLable.text = mainTitle;
     [self.mainTitleLable sizeToFit];
     [self addSubview:self.mainTitleLable];
-    [self setNeedsLayout];
-}
+ }
 
 - (void)setImageName:(NSString *)imageName {
     _imageName = imageName;

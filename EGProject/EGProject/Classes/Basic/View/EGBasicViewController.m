@@ -69,6 +69,7 @@ UINavigationControllerDelegate
 }
 
 - (void)configureNavigationItem:(UINavigationItem *)item NavigationBar:(UINavigationBar *)bar {
+
 }
 
 - (void)didReceiveMemoryWarning {

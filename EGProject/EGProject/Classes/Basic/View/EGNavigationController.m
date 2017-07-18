@@ -30,12 +30,15 @@ UIGestureRecognizerDelegate
     if (self.childViewControllers.count > 0) {
         if ([viewController isKindOfClass:[EGBasicViewController class]]) {
             UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-            [backButton setImage:[UIImage imageNamed:@"Navigation_back"] forState:UIControlStateNormal];
+            [backButton setImage:[UIImage imageNamed:@"commoditydetail_detail_ic_back_2_nor_31x31_"] forState:UIControlStateNormal];
             [backButton sizeToFit];
             backButton.exclusiveTouch = YES;
             [backButton addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
-            backButton.imageEdgeInsets = UIEdgeInsetsMake(0, -15, 0, 0);
-            ((EGBasicViewController *)viewController).customNavigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+            
+            UIBarButtonItem *spaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+            spaceItem.width = - 8;
+            
+            ((EGBasicViewController *)viewController).customNavigationItem.leftBarButtonItems = @[spaceItem, [[UIBarButtonItem alloc] initWithCustomView:backButton]];
         }
         viewController.hidesBottomBarWhenPushed = YES;
     }

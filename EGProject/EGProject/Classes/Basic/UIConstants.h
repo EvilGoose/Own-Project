@@ -52,6 +52,12 @@
     //主题字体色
 #define TEXT_MAIN_COLOR [UIColor darkGrayColor]
 
+    //字体副主题色
+#define SUB_TEXT_MAIN_COLOR [UIColor lightGrayColor]
+
+    //通用背景色
+#define MAIN_THEME_BACKGROUND_COLOR [UIColor colorWithWhite:.8 alpha:1]
+
     //透明色
 #define CLEAR_COLOR [UIColor clearColor]
 

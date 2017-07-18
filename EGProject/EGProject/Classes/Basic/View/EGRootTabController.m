@@ -33,6 +33,7 @@
 
 - (void)initSettings {
     self.tabBar.tintColor = [UIColor blackColor];
+    self.tabBar.translucent = NO;
 }
 
 - (void)initChildControllers {
