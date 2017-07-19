@@ -36,5 +36,22 @@
 
 #define NOTIFICATION(class, fuction) [NSString stringWithFormat:@"Notification_%@_%@", class, fuction]  
 
+    //单例
+#define SINGLETON_INTERFACE(class)  + (class *)sharedInstance##class;//声明
+
+    //实现
+#define SINGLETON_IMPLEMENTATION(class)\
+static class *_instance;\
++ (class *)sharedInstance##class {\
+		if (_instance == nil) {\
+		_instance = [[self alloc] init];}\
+	return _instance;}\
++ (id)allocWithZone:(NSZone *)zone {\
+    	static dispatch_once_t onceToken;\
+		dispatch_once(&onceToken, ^{\
+		_instance = [super allocWithZone:zone];\
+	});\
+	return _instance;}
+
 
 #endif /* Defines_h */

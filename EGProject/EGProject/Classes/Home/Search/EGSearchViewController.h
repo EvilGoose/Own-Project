@@ -10,4 +10,5 @@
 
 @interface EGSearchViewController : EGBasicViewController
 
+ 
 @end

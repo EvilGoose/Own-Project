@@ -9,9 +9,6 @@
 #import <UIKit/UIKit.h>
 
 
-@interface EGTextCollectionViewCell : UICollectionViewCell
-
-@end
 
 @class EGOptionsView;
 

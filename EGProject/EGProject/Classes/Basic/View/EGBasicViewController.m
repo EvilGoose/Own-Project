@@ -11,7 +11,6 @@
 #define Navigation_Background_Color RGBA_COLOR(222, 222, 222, 1)
 
 #import "EGBasicViewController.h"
-#import <Masonry.h>
 
 @interface EGBasicViewController ()
 <

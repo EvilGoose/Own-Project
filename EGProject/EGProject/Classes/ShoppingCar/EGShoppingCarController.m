@@ -11,6 +11,8 @@
 #import "EGShoppingCarRecommendCell.h"
 #import "EGShoppingCarChoosedGoodsCell.h"
 
+#import "EGGoodsPresentController.h"
+
 @interface EGShoppingCarController ()
 <
 UITableViewDataSource,
@@ -45,6 +47,10 @@ UITableViewDelegate
 
 - (void)editShoppingCar {
 //    NSLog(@"编辑购物车")
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.navigationController pushViewController:[EGGoodsPresentController new] animated:YES];
 }
 
 #pragma mark - request data

@@ -10,6 +10,11 @@
 
 @interface EGBasicViewController : UIViewController
 
+/**结构属性
+ 	参考分类 EGBasicViewController+DumpView
+ */
+@property (strong, nonatomic)NSObject *context;
+
 /**自定义导航栏Item*/
 @property (nonatomic, strong)UINavigationItem *customNavigationItem;
 

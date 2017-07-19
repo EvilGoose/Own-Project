@@ -9,6 +9,8 @@
 #ifndef UIConstants_h
 #define UIConstants_h
 
+#import "UIView+Extension.h"
+
     //屏幕宽
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
 
@@ -24,17 +26,10 @@
     //Tab bar 高度
 #define TAB_BAR_HEIGHT 49
 
-    // 顶部间隔
-#define TOP_MARGIN 10
+    //间隔
+#define CUSTOM_HORIZON_MARGIN 10
 
-    // 底部间隔
-#define BOTTOM_MARGIN 10
-
-    // 左间隔
-#define LEFT_MARGIN 10
-
-    //右边间隔
-#define RIGHT_MARGIN 10
+#define CUSTOM_VERTICAL_MARGIN 8
 
     //RGBA 颜色
 #define RGBA_COLOR(redNum, greenNum, blueNum, delta)  [UIColor colorWithRed:(redNum)/255.0 green:(greenNum)/255.0 blue:(blueNum)/255.0 alpha:(delta)]

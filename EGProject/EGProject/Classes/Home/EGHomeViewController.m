@@ -103,10 +103,6 @@ OptionsViewDataSource
 
 #pragma mark - user actions
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self.navigationController pushViewController:[EGGoodsPresentController new] animated:YES];
-}
-
 - (void)scanAction {
     
 }

@@ -11,6 +11,19 @@
 
 @implementation EGMethodSwizzlingHelper
 
++ (instancetype)weakSharedInstance {
+    static __weak EGMethodSwizzlingHelper *instance;
+    EGMethodSwizzlingHelper *strongInstance = instance;
+    
+    @synchronized (self) {
+        if (strongInstance == nil) {
+            strongInstance = [[[self class]alloc]init];
+            instance = strongInstance;
+        }
+    }
+    return strongInstance;
+}
+
 + (void)methodSwizzlingWithOriginalSelector:(SEL)originalSelector bySwizzledSelector:(SEL)swizzledSelector {
     
     Class class = [self class];

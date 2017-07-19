@@ -8,54 +8,10 @@
 
 #import "EGOptionsView.h"
 #import "UIView+Extension.h"
-#import <Masonry.h>
+#import "EGOptionTextCollectionViewCell.h"
 
-@interface EGTextCollectionViewCell ()
-
-/**标题*/
-@property (copy, nonatomic)NSString *title;
-
-/**标题栏*/
-@property (strong, nonatomic)UILabel *titleLabel;
-
-@end
-
-@implementation EGTextCollectionViewCell
-
-- (instancetype)initWithFrame:(CGRect)frame {
-    if (self = [super initWithFrame:frame]) {
-        [self addSubview:self.titleLabel];
-    }
-    return self;
-}
-
-- (void)layoutSubviews {
-    [super layoutSubviews];
-    [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.right.bottom.mas_equalTo(self);
-    }];
-}
-
-- (void)setTitle:(NSString *)title {
-    _title = title;
-    self.titleLabel.text = title;
-}
-
-#pragma mark - lazy
-
-- (UILabel *)titleLabel {
-    if (!_titleLabel) {
-        _titleLabel = [[UILabel alloc]initWithFrame:CGRectZero];
-        _titleLabel.font = SYSTEM_FONT(10);
-        _titleLabel.textAlignment = NSTextAlignmentCenter;
-        _titleLabel.textColor = GRAY_COLOR;
-    }
-    return _titleLabel;
-}
-
-@end
-
-
+#define BOTTOM_INDICATOR_HEIGHT 2
+#define CELL_WIDTH 60
 
 @interface EGOptionsView ()
 <
@@ -72,17 +28,16 @@ UICollectionViewDelegate
 @property (copy, nonatomic)NSArray<NSString *> *data;
 
 /**选中的cell*/
-@property (weak, nonatomic)EGTextCollectionViewCell *selectedCell;
+@property (weak, nonatomic)EGOptionTextCollectionViewCell *selectedCell;
 
 @end
 
-static NSString *cellID = @"optionsCellReuseIdentifier";
 @implementation EGOptionsView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        [self addSubview:self.optionsPad];
         [self.optionsPad addSubview:self.bottomIndicator];
+        [self addSubview:self.optionsPad];
     }
     return self;
 }
@@ -90,16 +45,17 @@ static NSString *cellID = @"optionsCellReuseIdentifier";
 - (void)layoutSubviews {
     [super layoutSubviews];
     [self.optionsPad mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.bottom.right.mas_equalTo(self);
+        make.top.left.right.bottom.mas_equalTo(self);
     }];
     
     [self.bottomIndicator mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.bottom.mas_equalTo(self);
-        make.size.mas_equalTo(CGSizeMake(40, 2));
+        make.top.mas_equalTo(self.optionsPad).offset(self.height - BOTTOM_INDICATOR_HEIGHT);
+        make.left.mas_equalTo(self.optionsPad);
+        make.size.mas_equalTo(CGSizeMake(CELL_WIDTH, BOTTOM_INDICATOR_HEIGHT));
     }];
 }
 
-- (void)setSelectedCell:(EGTextCollectionViewCell *)selectedCell {
+- (void)setSelectedCell:(EGOptionTextCollectionViewCell *)selectedCell {
     if (_selectedCell) {
         _selectedCell.titleLabel.textColor = GRAY_COLOR;
     }
@@ -111,13 +67,10 @@ static NSString *cellID = @"optionsCellReuseIdentifier";
 #pragma mark - delegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    self.selectedCell = (EGTextCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    self.selectedCell = (EGOptionTextCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
     [self.bottomIndicator mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.optionsPad).offset(indexPath.item * 40);
-        make.bottom.mas_equalTo(self.selectedCell);
-        make.width.mas_equalTo(self.selectedCell.titleLabel.width);
-        make.height.mas_equalTo(2);
-    }];
+         make.left.mas_equalTo(self.optionsPad).offset(CELL_WIDTH * indexPath.item);
+     }];
 
     if ([self.delegate respondsToSelector:@selector(optionsView:didSelected:)]) {
         [self.delegate optionsView:self didSelected:indexPath.item];
@@ -135,7 +88,7 @@ static NSString *cellID = @"optionsCellReuseIdentifier";
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    EGTextCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
+    EGOptionTextCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[EGOptionTextCollectionViewCell cellResuedID] forIndexPath:indexPath];
     cell.backgroundColor = DEBUG_COLOR;
     cell.title = self.data[indexPath.item];
     return cell;
@@ -149,12 +102,12 @@ static NSString *cellID = @"optionsCellReuseIdentifier";
         flowLayout.minimumLineSpacing = 0;
         flowLayout.minimumInteritemSpacing = 0;
         flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        flowLayout.itemSize = CGSizeMake(60, self.height);
+        flowLayout.itemSize = CGSizeMake(CELL_WIDTH, self.height);
         
-        _optionsPad = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, self.height) collectionViewLayout:flowLayout];
+        _optionsPad = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, self.height - BOTTOM_INDICATOR_HEIGHT) collectionViewLayout:flowLayout];
         _optionsPad.backgroundColor = CLEAR_COLOR;
         _optionsPad.showsHorizontalScrollIndicator = NO;
-        [_optionsPad registerClass:[EGTextCollectionViewCell class] forCellWithReuseIdentifier:cellID];
+        [_optionsPad registerClass:[EGOptionTextCollectionViewCell class] forCellWithReuseIdentifier:[EGOptionTextCollectionViewCell cellResuedID]];
         _optionsPad.dataSource = self;
         _optionsPad.delegate = self;
     }
@@ -163,7 +116,7 @@ static NSString *cellID = @"optionsCellReuseIdentifier";
 
 - (UIImageView *)bottomIndicator {
     if (!_bottomIndicator) {
-        _bottomIndicator = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 40, 2)];
+        _bottomIndicator = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, CELL_WIDTH, BOTTOM_INDICATOR_HEIGHT)];
         _bottomIndicator.backgroundColor = [UIColor redColor];
     }
     return _bottomIndicator;

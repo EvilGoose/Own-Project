@@ -12,6 +12,10 @@
 		C442CD021F149EB400947616 /* EGGoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C442CD011F149EB400947616 /* EGGoodsModel.m */; };
 		C4446C0A1F10DCA5007431E8 /* EGShoppingCarRecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4446C091F10DCA5007431E8 /* EGShoppingCarRecommendCell.m */; };
 		C4446C0D1F10DD7C007431E8 /* EGShoppingCarChoosedGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4446C0C1F10DD7C007431E8 /* EGShoppingCarChoosedGoodsCell.m */; };
+		C45BD7C31F1F06200059E71B /* CDDContext.m in Sources */ = {isa = PBXBuildFile; fileRef = C45BD7BC1F1F06200059E71B /* CDDContext.m */; };
+		C45BD7C41F1F06200059E71B /* CDDMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = C45BD7BE1F1F06200059E71B /* CDDMutableArray.m */; };
+		C45BD7C51F1F06200059E71B /* NSObject+CDD.m in Sources */ = {isa = PBXBuildFile; fileRef = C45BD7C01F1F06200059E71B /* NSObject+CDD.m */; };
+		C45BD7C61F1F06200059E71B /* UIView+CDD.m in Sources */ = {isa = PBXBuildFile; fileRef = C45BD7C21F1F06200059E71B /* UIView+CDD.m */; };
 		C460EB3B1F19E674004AD1C3 /* NSArray+Beyond.m in Sources */ = {isa = PBXBuildFile; fileRef = C460EB3A1F19E674004AD1C3 /* NSArray+Beyond.m */; };
 		C460EB3E1F19E6AB004AD1C3 /* NSMutableArray+Beyond.m in Sources */ = {isa = PBXBuildFile; fileRef = C460EB3D1F19E6AB004AD1C3 /* NSMutableArray+Beyond.m */; };
 		C460EB411F19E787004AD1C3 /* EGMethodSwizzlingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C460EB401F19E787004AD1C3 /* EGMethodSwizzlingHelper.m */; };
@@ -29,6 +33,9 @@
 		C48A0E951F17A805003BEAC1 /* EGSearchGoodsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C48A0E941F17A805003BEAC1 /* EGSearchGoodsController.m */; };
 		C48A0E981F17A82F003BEAC1 /* EGHomeNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C48A0E971F17A82F003BEAC1 /* EGHomeNavigationBar.m */; };
 		C48A0E9B1F17AA81003BEAC1 /* UIBarButtonItem+BarButtonItemWithButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C48A0E9A1F17AA81003BEAC1 /* UIBarButtonItem+BarButtonItemWithButton.m */; };
+		C4AED31A1F1F3EDD00FF1403 /* EGSpecialOptionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AED3191F1F3EDD00FF1403 /* EGSpecialOptionsView.m */; };
+		C4AED3201F1F3F8700FF1403 /* EGOptionTextCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AED31F1F1F3F8700FF1403 /* EGOptionTextCollectionViewCell.m */; };
+		C4AED3231F1F470900FF1403 /* EGAccountInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AED3221F1F470900FF1403 /* EGAccountInfoView.m */; };
 		C4AF60391F1DFC3A00474E97 /* EGScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AF60381F1DFC3A00474E97 /* EGScanViewController.m */; };
 		C4AF603C1F1DFC4400474E97 /* EGMessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AF603B1F1DFC4400474E97 /* EGMessagesViewController.m */; };
 		C4AF60401F1E072C00474E97 /* EGSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AF603F1F1E072C00474E97 /* EGSearchViewController.m */; };
@@ -83,6 +90,14 @@
 		C4446C091F10DCA5007431E8 /* EGShoppingCarRecommendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGShoppingCarRecommendCell.m; sourceTree = "<group>"; };
 		C4446C0B1F10DD7C007431E8 /* EGShoppingCarChoosedGoodsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGShoppingCarChoosedGoodsCell.h; sourceTree = "<group>"; };
 		C4446C0C1F10DD7C007431E8 /* EGShoppingCarChoosedGoodsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGShoppingCarChoosedGoodsCell.m; sourceTree = "<group>"; };
+		C45BD7BB1F1F06200059E71B /* CDDContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDDContext.h; sourceTree = "<group>"; };
+		C45BD7BC1F1F06200059E71B /* CDDContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDDContext.m; sourceTree = "<group>"; };
+		C45BD7BD1F1F06200059E71B /* CDDMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDDMutableArray.h; sourceTree = "<group>"; };
+		C45BD7BE1F1F06200059E71B /* CDDMutableArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDDMutableArray.m; sourceTree = "<group>"; };
+		C45BD7BF1F1F06200059E71B /* NSObject+CDD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CDD.h"; sourceTree = "<group>"; };
+		C45BD7C01F1F06200059E71B /* NSObject+CDD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CDD.m"; sourceTree = "<group>"; };
+		C45BD7C11F1F06200059E71B /* UIView+CDD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CDD.h"; sourceTree = "<group>"; };
+		C45BD7C21F1F06200059E71B /* UIView+CDD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CDD.m"; sourceTree = "<group>"; };
 		C460EB391F19E674004AD1C3 /* NSArray+Beyond.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Beyond.h"; sourceTree = "<group>"; };
 		C460EB3A1F19E674004AD1C3 /* NSArray+Beyond.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Beyond.m"; sourceTree = "<group>"; };
 		C460EB3C1F19E6AB004AD1C3 /* NSMutableArray+Beyond.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Beyond.h"; sourceTree = "<group>"; };
@@ -120,6 +135,12 @@
 		C48A0E971F17A82F003BEAC1 /* EGHomeNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGHomeNavigationBar.m; sourceTree = "<group>"; };
 		C48A0E991F17AA81003BEAC1 /* UIBarButtonItem+BarButtonItemWithButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+BarButtonItemWithButton.h"; sourceTree = "<group>"; };
 		C48A0E9A1F17AA81003BEAC1 /* UIBarButtonItem+BarButtonItemWithButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+BarButtonItemWithButton.m"; sourceTree = "<group>"; };
+		C4AED3181F1F3EDD00FF1403 /* EGSpecialOptionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGSpecialOptionsView.h; sourceTree = "<group>"; };
+		C4AED3191F1F3EDD00FF1403 /* EGSpecialOptionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGSpecialOptionsView.m; sourceTree = "<group>"; };
+		C4AED31E1F1F3F8700FF1403 /* EGOptionTextCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOptionTextCollectionViewCell.h; sourceTree = "<group>"; };
+		C4AED31F1F1F3F8700FF1403 /* EGOptionTextCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOptionTextCollectionViewCell.m; sourceTree = "<group>"; };
+		C4AED3211F1F470900FF1403 /* EGAccountInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGAccountInfoView.h; sourceTree = "<group>"; };
+		C4AED3221F1F470900FF1403 /* EGAccountInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGAccountInfoView.m; sourceTree = "<group>"; };
 		C4AF60371F1DFC3A00474E97 /* EGScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGScanViewController.h; sourceTree = "<group>"; };
 		C4AF60381F1DFC3A00474E97 /* EGScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGScanViewController.m; sourceTree = "<group>"; };
 		C4AF603A1F1DFC4400474E97 /* EGMessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGMessagesViewController.h; sourceTree = "<group>"; };
@@ -223,6 +244,21 @@
 				A98F6E4E5E5FF6BAFDF37C4E /* Pods-EGProjectUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C45BD7BA1F1F06200059E71B /* CDD */ = {
+			isa = PBXGroup;
+			children = (
+				C45BD7BB1F1F06200059E71B /* CDDContext.h */,
+				C45BD7BC1F1F06200059E71B /* CDDContext.m */,
+				C45BD7BD1F1F06200059E71B /* CDDMutableArray.h */,
+				C45BD7BE1F1F06200059E71B /* CDDMutableArray.m */,
+				C45BD7BF1F1F06200059E71B /* NSObject+CDD.h */,
+				C45BD7C01F1F06200059E71B /* NSObject+CDD.m */,
+				C45BD7C11F1F06200059E71B /* UIView+CDD.h */,
+				C45BD7C21F1F06200059E71B /* UIView+CDD.m */,
+			);
+			path = CDD;
 			sourceTree = "<group>";
 		};
 		C460EB351F19E533004AD1C3 /* Other */ = {
@@ -434,6 +470,10 @@
 				C4FAEDC11F18547900F1F124 /* EGCustomButton.m */,
 				C4AF60441F1E10F500474E97 /* EGOptionsView.h */,
 				C4AF60451F1E10F500474E97 /* EGOptionsView.m */,
+				C4AED3181F1F3EDD00FF1403 /* EGSpecialOptionsView.h */,
+				C4AED3191F1F3EDD00FF1403 /* EGSpecialOptionsView.m */,
+				C4AED31E1F1F3F8700FF1403 /* EGOptionTextCollectionViewCell.h */,
+				C4AED31F1F1F3F8700FF1403 /* EGOptionTextCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -441,10 +481,6 @@
 		C4D95A8F1F0C73010058F4DF /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				C4AF60361F1DFC2A00474E97 /* Scan */,
-				C4AF60351F1DFC2A00474E97 /* Messages */,
-				C4AF603D1F1E071F00474E97 /* Search */,
-				C4FAEDC91F18AA6800F1F124 /* Recommends */,
 				C4D95A901F0C73010058F4DF /* EGHomeViewController.h */,
 				C4D95A911F0C73010058F4DF /* EGHomeViewController.m */,
 				C48A0E961F17A82F003BEAC1 /* EGHomeNavigationBar.h */,
@@ -453,6 +489,10 @@
 				C48A0E941F17A805003BEAC1 /* EGSearchGoodsController.m */,
 				C48A0E901F17A345003BEAC1 /* EGGoodsPresentController.h */,
 				C48A0E911F17A345003BEAC1 /* EGGoodsPresentController.m */,
+				C4AF60361F1DFC2A00474E97 /* Scan */,
+				C4AF60351F1DFC2A00474E97 /* Messages */,
+				C4AF603D1F1E071F00474E97 /* Search */,
+				C4FAEDC91F18AA6800F1F124 /* Recommends */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -521,6 +561,8 @@
 				C4D95AA31F0C73010058F4DF /* EGUserController.m */,
 				C48A0E871F177284003BEAC1 /* EGUserInfoCatalogueCell.h */,
 				C48A0E881F177284003BEAC1 /* EGUserInfoCatalogueCell.m */,
+				C4AED3211F1F470900FF1403 /* EGAccountInfoView.h */,
+				C4AED3221F1F470900FF1403 /* EGAccountInfoView.m */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -544,8 +586,9 @@
 		C4D95AA61F0C73010058F4DF /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				C460EB351F19E533004AD1C3 /* Other */,
+				C45BD7BA1F1F06200059E71B /* CDD */,
 				C46A37D21F0E5508009B0F37 /* Category */,
+				C460EB351F19E533004AD1C3 /* Other */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -878,22 +921,29 @@
 				C48A0E861F176698003BEAC1 /* UIView+Extension.m in Sources */,
 				C4446C0D1F10DD7C007431E8 /* EGShoppingCarChoosedGoodsCell.m in Sources */,
 				C4D95A561F0C70B60058F4DF /* main.m in Sources */,
+				C45BD7C51F1F06200059E71B /* NSObject+CDD.m in Sources */,
 				C48A0E981F17A82F003BEAC1 /* EGHomeNavigationBar.m in Sources */,
 				C4446C0A1F10DCA5007431E8 /* EGShoppingCarRecommendCell.m in Sources */,
 				C460EB471F19EE22004AD1C3 /* NSArray+Log.m in Sources */,
 				C460EB3B1F19E674004AD1C3 /* NSArray+Beyond.m in Sources */,
 				C48A0E9B1F17AA81003BEAC1 /* UIBarButtonItem+BarButtonItemWithButton.m in Sources */,
 				C4FAEDD01F18AAA200F1F124 /* EGSpecialController.m in Sources */,
+				C4AED3201F1F3F8700FF1403 /* EGOptionTextCollectionViewCell.m in Sources */,
 				C4AF603C1F1DFC4400474E97 /* EGMessagesViewController.m in Sources */,
 				C460EB4D1F19FC69004AD1C3 /* EGOfficialRecommendController.m in Sources */,
 				C48A0E951F17A805003BEAC1 /* EGSearchGoodsController.m in Sources */,
+				C45BD7C41F1F06200059E71B /* CDDMutableArray.m in Sources */,
 				C4FAEDC81F18999100F1F124 /* UIScrollView+Direction.m in Sources */,
 				C4D95AA71F0C73010058F4DF /* EGBasicViewController.m in Sources */,
 				C463E68D1F1744F000C22840 /* EGControllerTransitionManager.m in Sources */,
 				C48A0E891F177284003BEAC1 /* EGUserInfoCatalogueCell.m in Sources */,
 				C48A0E921F17A345003BEAC1 /* EGGoodsPresentController.m in Sources */,
 				C460EB411F19E787004AD1C3 /* EGMethodSwizzlingHelper.m in Sources */,
+				C45BD7C31F1F06200059E71B /* CDDContext.m in Sources */,
+				C45BD7C61F1F06200059E71B /* UIView+CDD.m in Sources */,
+				C4AED31A1F1F3EDD00FF1403 /* EGSpecialOptionsView.m in Sources */,
 				C4FAEDC51F188F6200F1F124 /* EGControllerTransitionGestureHelper.m in Sources */,
+				C4AED3231F1F470900FF1403 /* EGAccountInfoView.m in Sources */,
 				C4AF60461F1E10F500474E97 /* EGOptionsView.m in Sources */,
 				C4D95AA81F0C73010058F4DF /* EGRootTabController.m in Sources */,
 				C4D95AAC1F0C73010058F4DF /* EGShoppingCarController.m in Sources */,
