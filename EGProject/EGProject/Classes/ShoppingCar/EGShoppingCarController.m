@@ -42,7 +42,17 @@ UITableViewDelegate
 
 - (void)configureNavigationItem:(UINavigationItem *)item NavigationBar:(UINavigationBar *)bar {
     item.title = @"购物车";
-    item.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"编辑" style:UIBarButtonItemStylePlain target:self action:@selector(editShoppingCar)];
+    
+    UIButton *editButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [editButton setTitle:@"编辑" forState:UIControlStateNormal];
+    [editButton addTarget:self action:@selector(editShoppingCar) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *editItem = [[UIBarButtonItem alloc]initWithCustomView:editButton];
+    
+    UIBarButtonItem *spaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    spaceItem.width = -20;
+    
+    item.rightBarButtonItems = @[spaceItem,editItem];
+//    editButton.hidden = YES;
 }
 
 - (void)editShoppingCar {

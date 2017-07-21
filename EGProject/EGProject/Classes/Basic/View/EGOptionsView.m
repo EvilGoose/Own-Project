@@ -30,6 +30,10 @@ UICollectionViewDelegate
 /**选中的cell*/
 @property (weak, nonatomic)EGOptionTextCollectionViewCell *selectedCell;
 
+/**cell尺寸*/
+@property (assign, nonatomic)CGFloat cellWidth;
+@property (assign, nonatomic)CGFloat cellHeight;
+
 @end
 
 @implementation EGOptionsView
@@ -51,9 +55,15 @@ UICollectionViewDelegate
     [self.bottomIndicator mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.optionsPad).offset(self.height - BOTTOM_INDICATOR_HEIGHT);
         make.left.mas_equalTo(self.optionsPad);
-        make.size.mas_equalTo(CGSizeMake(CELL_WIDTH, BOTTOM_INDICATOR_HEIGHT));
+        make.size.mas_equalTo(CGSizeMake(self.cellWidth, BOTTOM_INDICATOR_HEIGHT));
     }];
 }
+
+- (void)setSelectedItem:(NSIndexPath *)indexPath {
+    
+}
+
+#pragma mark - setter
 
 - (void)setSelectedCell:(EGOptionTextCollectionViewCell *)selectedCell {
     if (_selectedCell) {
@@ -64,12 +74,33 @@ UICollectionViewDelegate
     selectedCell.titleLabel.textColor = RED_COLOR;
 }
 
+- (void)setDelegate:(id<OptionsViewDelegate>)delegate {
+    _delegate = delegate;
+ 
+    if ([self.delegate respondsToSelector:@selector(optionsViewSetItemWidth:)]) {
+        self.cellWidth = [self.delegate optionsViewSetItemWidth:self];
+     }
+    
+    if ([self.delegate respondsToSelector:@selector(optionsViewSetItemHeight:)]) {
+        self.cellHeight = [self.delegate optionsViewSetItemHeight:self];
+    }
+}
+
+- (void)setDataSource:(id<OptionsViewDataSource>)dataSource {
+    _dataSource = dataSource;
+    
+    if ([self.dataSource respondsToSelector:@selector(setDataSourceOptionView:)]) {
+        self.data =  [self.dataSource setDataSourceOptionView:self];
+    }
+}
+
 #pragma mark - delegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     self.selectedCell = (EGOptionTextCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    
     [self.bottomIndicator mas_updateConstraints:^(MASConstraintMaker *make) {
-         make.left.mas_equalTo(self.optionsPad).offset(CELL_WIDTH * indexPath.item);
+         make.left.mas_equalTo(self.optionsPad).offset(self.cellWidth * indexPath.item);
      }];
 
     if ([self.delegate respondsToSelector:@selector(optionsView:didSelected:)]) {
@@ -80,11 +111,7 @@ UICollectionViewDelegate
 #pragma mark - data source
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    if ([self.delegate respondsToSelector:@selector(setDataSourceOptionView:)]) {
-        self.data =  [self.dataSource setDataSourceOptionView:self];
-        return self.data.count;
-    }
-    return 0;
+    return self.data.count;
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -102,9 +129,9 @@ UICollectionViewDelegate
         flowLayout.minimumLineSpacing = 0;
         flowLayout.minimumInteritemSpacing = 0;
         flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        flowLayout.itemSize = CGSizeMake(CELL_WIDTH, self.height);
+        flowLayout.itemSize = CGSizeMake(self.cellWidth, self.cellHeight);
         
-        _optionsPad = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, self.height - BOTTOM_INDICATOR_HEIGHT) collectionViewLayout:flowLayout];
+        _optionsPad = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, self.cellHeight - BOTTOM_INDICATOR_HEIGHT) collectionViewLayout:flowLayout];
         _optionsPad.backgroundColor = CLEAR_COLOR;
         _optionsPad.showsHorizontalScrollIndicator = NO;
         [_optionsPad registerClass:[EGOptionTextCollectionViewCell class] forCellWithReuseIdentifier:[EGOptionTextCollectionViewCell cellResuedID]];
@@ -116,10 +143,26 @@ UICollectionViewDelegate
 
 - (UIImageView *)bottomIndicator {
     if (!_bottomIndicator) {
-        _bottomIndicator = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, CELL_WIDTH, BOTTOM_INDICATOR_HEIGHT)];
+        _bottomIndicator = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.cellWidth, BOTTOM_INDICATOR_HEIGHT)];
         _bottomIndicator.backgroundColor = [UIColor redColor];
     }
     return _bottomIndicator;
+}
+
+- (CGFloat)cellWidth {
+    if (_cellWidth) {
+        return _cellWidth;
+    }else {
+        return CELL_WIDTH;
+    }
+}
+
+- (CGFloat)cellHeight {
+    if (_cellHeight) {
+        return _cellHeight;
+    }else {
+        return self.height;
+    }
 }
 
 @end

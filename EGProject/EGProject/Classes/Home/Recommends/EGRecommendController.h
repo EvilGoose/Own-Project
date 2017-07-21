@@ -6,8 +6,8 @@
 //  Copyright © 2017年 EGMade. All rights reserved.
 //
 
-#import "EGBasicViewController.h"
+#import "EGGoodsViewController.h"
 
-@interface EGRecommendController : EGBasicViewController
+@interface EGRecommendController : EGGoodsViewController
 
 @end

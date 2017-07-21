@@ -12,24 +12,32 @@
 #import "EGMessagesViewController.h"
 #import "EGSearchViewController.h"
 
+#import "EGRecommendController.h"
+#import "EGTimeLimitViewController.h"
+#import "EGCommonViewController.h"
+
 #import "EGOptionsView.h"
+#import "EGPresentGoodsCollectionViewCell.h"
 
 #import "UIView+Extension.h"
 #import "UIBarButtonItem+BarButtonItemWithButton.h"
 
-#define OPTIONS_VIEW_HEIGHT 30
-
 @interface EGHomeViewController ()
 <
 OptionsViewDelegate,
-OptionsViewDataSource
+OptionsViewDataSource,
+UICollectionViewDelegate,
+UICollectionViewDataSource
 >
 
 /**选项板*/
 @property (strong, nonatomic)EGOptionsView *optionsView;
 
-/**容器*/
-@property (strong, nonatomic)UIScrollView *containerView;
+/**展示容器*/
+@property (strong, nonatomic)UICollectionView *presentContainerView;
+
+/**控制器选项组*/
+@property (copy, nonatomic)NSArray *controllerTitles;
 
 @end
 
@@ -38,12 +46,42 @@ OptionsViewDataSource
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initSubviews];
+    [self initSubControllers];
 }
 
 - (void)initSubviews {
     [self.view addSubview:self.optionsView];
-    [self.view addSubview:self.containerView];
+    [self.view addSubview:self.presentContainerView];
  }
+
+- (void)initSubControllers {
+    EGRecommendController *recommendController = [EGRecommendController new];
+    [self addChildViewController:recommendController];
+    
+    EGTimeLimitViewController *timeLimitController = [EGTimeLimitViewController new];
+    [self addChildViewController:timeLimitController];
+    
+    EGCommonViewController *commonController1 = [EGCommonViewController new];
+    [self addChildViewController:commonController1];
+    
+    EGCommonViewController *commonController2 = [EGCommonViewController new];
+    [self addChildViewController:commonController2];
+    
+    EGCommonViewController *commonController3 = [EGCommonViewController new];
+    [self addChildViewController:commonController3];
+    
+    EGCommonViewController *commonController4 = [EGCommonViewController new];
+    [self addChildViewController:commonController4];
+    
+    EGCommonViewController *commonController5 = [EGCommonViewController new];
+    [self addChildViewController:commonController5];
+    
+    EGCommonViewController *commonController6 = [EGCommonViewController new];
+    [self addChildViewController:commonController6];
+    
+    EGCommonViewController *commonController7 = [EGCommonViewController new];
+    [self addChildViewController:commonController7];
+}
 
 - (void)configureNavigationItem:(UINavigationItem *)item NavigationBar:(UINavigationBar *)bar {
     UIButton *leftItemButton = [self setUpNavigationBarItemButton:@"扫一扫" fontSize:9
@@ -115,20 +153,46 @@ OptionsViewDataSource
 
 - (void)optionsView:(EGOptionsView *)optionsView didSelected:(NSInteger)index {
     NSLog(@"%ld", (long)index)
+    NSIndexPath *path = [NSIndexPath indexPathForRow:index inSection:0];
+    [self.presentContainerView scrollToItemAtIndexPath:path atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
 }
 
 - (NSArray *)setDataSourceOptionView:(EGOptionsView *)optionsView {
-    return @[@"标题1", @"标题2", @"标题3", @"标题1", @"标题2", @"标题3", @"标题1", @"标题2", @"标题3"];
+    return self.controllerTitles;
 }
 
-#pragma mark - lazy
+#pragma mark - collection view data source
 
-- (UIScrollView *)containerView {
-    if (!_containerView) {
-        _containerView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, NAVIGATION_BAR_HEIGHT + OPTIONS_VIEW_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT - NAVIGATION_BAR_HEIGHT - OPTIONS_VIEW_HEIGHT - TAB_BAR_HEIGHT)];
-        _containerView.backgroundColor = DEBUG_COLOR;
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.controllerTitles.count;
+}
+
+- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    EGPresentGoodsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[EGPresentGoodsCollectionViewCell cellResuedID] forIndexPath:indexPath];
+    cell.backgroundColor = DEBUG_COLOR;
+    [cell setData:self.controllerTitles[indexPath.item]];
+    return cell;
+}
+
+#pragma mark - lazy 
+
+- (UICollectionView *)presentContainerView {
+    if (!_presentContainerView) {
+        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
+        flowLayout.minimumLineSpacing = 0;
+        flowLayout.minimumInteritemSpacing = 0;
+        flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        flowLayout.itemSize = CGSizeMake(SCREEN_WIDTH,  SCREEN_HEIGHT - NAVIGATION_BAR_HEIGHT - OPTIONS_VIEW_HEIGHT - TAB_BAR_HEIGHT );
+        
+        _presentContainerView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, NAVIGATION_BAR_HEIGHT + OPTIONS_VIEW_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT - NAVIGATION_BAR_HEIGHT - OPTIONS_VIEW_HEIGHT - TAB_BAR_HEIGHT) collectionViewLayout:flowLayout];
+        _presentContainerView.backgroundColor = CLEAR_COLOR;
+        _presentContainerView.showsHorizontalScrollIndicator = NO;
+        [_presentContainerView registerClass:[EGPresentGoodsCollectionViewCell class] forCellWithReuseIdentifier:[EGPresentGoodsCollectionViewCell cellResuedID]];
+        _presentContainerView.pagingEnabled = YES;
+        _presentContainerView.dataSource = self;
+        _presentContainerView.delegate = self;
     }
-    return _containerView;
+    return _presentContainerView;
 }
 
 - (EGOptionsView *)optionsView {
@@ -139,6 +203,10 @@ OptionsViewDataSource
         _optionsView.dataSource = self;
     }
     return _optionsView;
+}
+
+- (NSArray *)controllerTitles {
+    return @[@"标题1", @"标题2", @"标题3", @"标题1", @"标题2", @"标题3", @"标题1", @"标题2", @"标题3"];
 }
 
 @end

@@ -23,8 +23,14 @@
     //导航栏高度
 #define NAVIGATION_BAR_HEIGHT 64
 
+    //横向选项板高度（首页）
+#define OPTIONS_VIEW_HEIGHT 30
+
     //Tab bar 高度
 #define TAB_BAR_HEIGHT 49
+
+    //Banner 高度
+#define BANNER_HEIGHT 268
 
     //间隔
 #define CUSTOM_HORIZON_MARGIN 10

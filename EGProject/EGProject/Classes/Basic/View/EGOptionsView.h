@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-
-
 @class EGOptionsView;
 
 @protocol OptionsViewDelegate <NSObject>
+
+@optional
+
+- (CGFloat)optionsViewSetItemHeight:(EGOptionsView *)optionsView;
+
+- (CGFloat)optionsViewSetItemWidth:(EGOptionsView *)optionsView;
 
 - (void)optionsView:(EGOptionsView *)optionsView didSelected:(NSInteger)index;
 
@@ -20,6 +24,7 @@
 
 @protocol OptionsViewDataSource <NSObject>
 
+@required
 - (NSArray *)setDataSourceOptionView:(EGOptionsView *)optionsView;
 
 @end
@@ -31,5 +36,7 @@
 
 /**data source*/
 @property (weak, nonatomic)id<OptionsViewDataSource> dataSource;
+
+- (void)setSelectedItem:(NSIndexPath *)indexPath;
 
 @end

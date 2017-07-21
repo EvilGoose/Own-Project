@@ -11,6 +11,7 @@
 
 #import "EGUserController.h"
 #import "EGAccountInfoView.h"
+#import "EGOrderViewController.h"
 
 @interface EGUserController ()
 <
@@ -54,14 +55,20 @@ UITableViewDataSource
 
 #pragma mark - tableView delegate
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0) {
-        if (indexPath.row == 0) {
-            return TITLE_VIEW_HEIGHT;
-        }
-        return OPTIONS_SINGLE_ROW_HEIGHT;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0 && indexPath.row == 0) {
+        [self.navigationController pushViewController:[EGOrderViewController new] animated:YES];
     }
-    return OPTIONS_SINGLE_ROW_HEIGHT * 3 + TITLE_VIEW_HEIGHT;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        return TITLE_VIEW_HEIGHT;
+    }else if (indexPath.section == 0) {
+        return OPTIONS_SINGLE_ROW_HEIGHT;
+    }else {
+        return OPTIONS_SINGLE_ROW_HEIGHT * 3;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
@@ -79,10 +86,7 @@ UITableViewDataSource
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (section==0) {
-        return 2;
-    }
-    return 1;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -94,6 +98,8 @@ UITableViewDataSource
     if (indexPath.section == 0 && indexPath.row == 0) {
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.textLabel.text = @"我的订单";
+    }else if (indexPath.section == 1 && indexPath.row == 0) {
+        cell.textLabel.text = @"我的服务";
     }
     
     return cell;
@@ -105,6 +111,7 @@ UITableViewDataSource
     if (!_infoView) {
         _infoView = [[EGAccountInfoView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 200)];
         _infoView.backgroundColor = DEBUG_COLOR;
+//        __weak typeof(self) weakSelf = self;
         _infoView.callBack = ^(AccountInfoViewCallBackType type) {
             if (type == KGoToUserDetailInfoController) {
                 NSLog(@"KGoToUserDetailInfoController")
