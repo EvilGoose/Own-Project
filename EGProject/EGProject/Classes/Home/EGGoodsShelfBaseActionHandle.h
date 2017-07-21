@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "EGBannerCollectionViewCell.h"
+
 @protocol GoodsShelfBaseActionProtocal <NSObject>
 
     /**返回点击位置*/
@@ -16,10 +18,10 @@
 @required
 
 	/**需要展示的横幅数据*/
-- (NSArray *)setDataSourceOfBanner:(__kindof UICollectionView *)goodsShelf;
+- (NSArray *)setDataSourceOfBanner;
 
     /**需要展示的商品数据*/
-- (NSArray *)setDataSourceOfGoodsShelf:(__kindof UICollectionView *)goodsShelf;
+- (NSArray *)setDataSourceOfGoodsShelf;
 
 @end
 
@@ -30,6 +32,8 @@ UICollectionViewDataSource
 >
 
 SINGLETON_INTERFACE(EGGoodsShelfBaseActionHandle)
+
+- (NSString *)cellReusedID;
 
 /**delegate*/
 @property (weak, nonatomic)id<GoodsShelfBaseActionProtocal> delegate;

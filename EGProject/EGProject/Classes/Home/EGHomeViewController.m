@@ -189,6 +189,7 @@ UICollectionViewDataSource
         _presentContainerView.showsHorizontalScrollIndicator = NO;
         [_presentContainerView registerClass:[EGPresentGoodsCollectionViewCell class] forCellWithReuseIdentifier:[EGPresentGoodsCollectionViewCell cellResuedID]];
         _presentContainerView.pagingEnabled = YES;
+        _presentContainerView.bounces = NO;
         _presentContainerView.dataSource = self;
         _presentContainerView.delegate = self;
     }
@@ -206,7 +207,7 @@ UICollectionViewDataSource
 }
 
 - (NSArray *)controllerTitles {
-    return @[@"标题1", @"标题2", @"标题3", @"标题1", @"标题2", @"标题3", @"标题1", @"标题2", @"标题3"];
+    return @[@"标题1", @"标题2", @"标题3", @"标题4", @"标题5", @"标题6", @"标题7", @"标题8", @"标题9", @"标题10", @"标题11"];
 }
 
 @end

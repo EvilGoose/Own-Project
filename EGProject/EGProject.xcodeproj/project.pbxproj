@@ -31,6 +31,7 @@
 		C46A37E11F0E57F5009B0F37 /* EGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C46A37E01F0E57F5009B0F37 /* EGNavigationController.m */; };
 		C47541E51F21A6190007C595 /* EGPresentGoodsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C47541E41F21A6190007C595 /* EGPresentGoodsCollectionViewCell.m */; };
 		C47541E81F21A9C50007C595 /* EGGoodsShelfBaseActionHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = C47541E71F21A9C50007C595 /* EGGoodsShelfBaseActionHandle.m */; };
+		C47541EF1F21E1940007C595 /* EGBannerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C47541EE1F21E1940007C595 /* EGBannerCollectionViewCell.m */; };
 		C48A0E861F176698003BEAC1 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C48A0E851F176698003BEAC1 /* UIView+Extension.m */; };
 		C48A0E891F177284003BEAC1 /* EGUserInfoCatalogueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C48A0E881F177284003BEAC1 /* EGUserInfoCatalogueCell.m */; };
 		C48A0E8F1F177594003BEAC1 /* UITableViewCell+CaculateHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = C48A0E8E1F177594003BEAC1 /* UITableViewCell+CaculateHeight.m */; };
@@ -137,6 +138,8 @@
 		C47541E41F21A6190007C595 /* EGPresentGoodsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGPresentGoodsCollectionViewCell.m; sourceTree = "<group>"; };
 		C47541E61F21A9C50007C595 /* EGGoodsShelfBaseActionHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGGoodsShelfBaseActionHandle.h; sourceTree = "<group>"; };
 		C47541E71F21A9C50007C595 /* EGGoodsShelfBaseActionHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGGoodsShelfBaseActionHandle.m; sourceTree = "<group>"; };
+		C47541ED1F21E1940007C595 /* EGBannerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGBannerCollectionViewCell.h; sourceTree = "<group>"; };
+		C47541EE1F21E1940007C595 /* EGBannerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGBannerCollectionViewCell.m; sourceTree = "<group>"; };
 		C48A0E841F176698003BEAC1 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		C48A0E851F176698003BEAC1 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		C48A0E871F177284003BEAC1 /* EGUserInfoCatalogueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGUserInfoCatalogueCell.h; sourceTree = "<group>"; };
@@ -554,6 +557,8 @@
 				C47541E41F21A6190007C595 /* EGPresentGoodsCollectionViewCell.m */,
 				C47541E61F21A9C50007C595 /* EGGoodsShelfBaseActionHandle.h */,
 				C47541E71F21A9C50007C595 /* EGGoodsShelfBaseActionHandle.m */,
+				C47541ED1F21E1940007C595 /* EGBannerCollectionViewCell.h */,
+				C47541EE1F21E1940007C595 /* EGBannerCollectionViewCell.m */,
 				C47541E91F21AD490007C595 /* Model */,
 				C4FAEDC91F18AA6800F1F124 /* Recommends */,
 				C458B78E1F2094D50080DFAE /* TimeLimit */,
@@ -1016,6 +1021,7 @@
 				C460EB411F19E787004AD1C3 /* EGMethodSwizzlingHelper.m in Sources */,
 				C45BD7C31F1F06200059E71B /* CDDContext.m in Sources */,
 				C45BD7C61F1F06200059E71B /* UIView+CDD.m in Sources */,
+				C47541EF1F21E1940007C595 /* EGBannerCollectionViewCell.m in Sources */,
 				C4AED31A1F1F3EDD00FF1403 /* EGSpecialOptionsView.m in Sources */,
 				C4FAEDC51F188F6200F1F124 /* EGControllerTransitionGestureHelper.m in Sources */,
 				C47541E51F21A6190007C595 /* EGPresentGoodsCollectionViewCell.m in Sources */,

@@ -30,7 +30,10 @@
 #define TAB_BAR_HEIGHT 49
 
     //Banner 高度
-#define BANNER_HEIGHT 268
+#define BANNER_HEIGHT 168
+
+    //商品cell 高度
+#define GOODS_CELL_HEIGHT 180
 
     //间隔
 #define CUSTOM_HORIZON_MARGIN 10
