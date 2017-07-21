@@ -10,6 +10,6 @@
 
 @interface EGBannerCollectionViewCell : UICollectionViewCell
 
-+ (NSString *)cellReusedID;
+
 
 @end

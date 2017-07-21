@@ -10,9 +10,6 @@
 
 @implementation EGBannerCollectionViewCell
 
-+ (NSString *)cellReusedID {
-    return NSStringFromClass(self);
-}
 
 
 

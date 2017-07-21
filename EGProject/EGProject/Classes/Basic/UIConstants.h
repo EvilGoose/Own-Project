@@ -10,6 +10,7 @@
 #define UIConstants_h
 
 #import "UIView+Extension.h"
+#import "UICollectionReusableView+ReusedCellID.h"
 
     //屏幕宽
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)

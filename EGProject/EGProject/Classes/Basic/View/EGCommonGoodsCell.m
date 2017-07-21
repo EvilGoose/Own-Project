@@ -1,15 +1,15 @@
 //
-//  EGShoppingCarChoosedGoodsCell.m
+//  EGCommonGoodsCell.m
 //  EGProject
 //
-//  Created by EG on 2017/7/8.
+//  Created by EG on 2017/7/21.
 //  Copyright © 2017年 EGMade. All rights reserved.
 //
 
-#import "EGShoppingCarChoosedGoodsCell.h"
+#import "EGCommonGoodsCell.h"
 #import "EGGoodsModel.h"
 
-@interface EGGoodsView()
+@interface EGCommonGoodsCell ()
 
 /**模型*/
 @property (strong, nonatomic)EGGoodsModel *model;
@@ -34,7 +34,7 @@
 
 @end
 
-@implementation EGGoodsView
+@implementation EGCommonGoodsCell
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
@@ -48,6 +48,7 @@
     [self addSubview:self.avilableColorLabel];
     [self addSubview:self.introduceLabel];
     [self addSubview:self.nameLabel];
+    [self addSubview:self.limitReminder];
     [self addSubview:self.priceLabel];
 }
 
@@ -70,23 +71,35 @@
     [super layoutSubviews];
     
     [self.goodsImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.right.equalTo(self);
-        make.height.equalTo(@(200));
+        make.top.mas_equalTo(self);
+        make.centerX.mas_equalTo(self);
+        make.size.mas_equalTo(CGSizeMake(self.width - 4, 130));
+    }];
+
+    [self.avilableColorLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.mas_equalTo(self.goodsImageView).offset(2);
+        make.size.mas_equalTo(CGSizeMake(20, 40));
     }];
     
-    [self.limitReminder mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.goodsImageView.mas_bottom);
-        make.left.right.equalTo(self);
+    [self.introduceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.mas_equalTo(self.goodsImageView);
     }];
-    
+ 
     [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.limitReminder);
-        make.left.right.equalTo(self);
+        make.top.mas_equalTo(self.introduceLabel.mas_bottom);
+        make.left.right.mas_equalTo(self.goodsImageView);
+        
     }];
     
+        //    [self.limitReminder mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(self.goodsImageView.mas_bottom);
+//        make.left.right.equalTo(self);
+//    }];
+//    
+//
     [self.priceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.nameLabel.mas_bottom);
-        make.left.right.equalTo(self);
+        make.left.right.equalTo(self.goodsImageView);
     }];
 }
 
@@ -104,6 +117,7 @@
     if (!_avilableColorLabel) {
         _avilableColorLabel = [[UILabel alloc]initWithFrame:CGRectZero];
         _avilableColorLabel.numberOfLines = 0;
+        _avilableColorLabel.text = @"可选颜色";
         _avilableColorLabel.backgroundColor = DEBUG_COLOR;
     }
     return _avilableColorLabel;
@@ -113,6 +127,7 @@
     if (!_introduceLabel) {
         _introduceLabel = [[UILabel alloc]initWithFrame:CGRectZero];
         _introduceLabel.numberOfLines = 1;
+        _introduceLabel.text = @"介绍";
         _introduceLabel.backgroundColor = DEBUG_COLOR;
     }
     return _introduceLabel;
@@ -122,6 +137,7 @@
     if (!_nameLabel) {
         _nameLabel = [[UILabel alloc]initWithFrame:CGRectZero];
         _nameLabel.numberOfLines = 1;
+        _nameLabel.text = @"名称";
         _nameLabel.backgroundColor = DEBUG_COLOR;
         _nameLabel.textColor = TEXT_MAIN_COLOR;
     }
@@ -134,6 +150,7 @@
         _limitReminder = [[UILabel alloc]initWithFrame:CGRectZero];
         _limitReminder.numberOfLines = 1;
         _limitReminder.backgroundColor = DEBUG_COLOR;
+        _limitReminder.text = @"限时";
         _limitReminder.textColor = ORANGE_COLOR;
     }
     return _limitReminder;
@@ -144,26 +161,10 @@
     if (!_priceLabel) {
         _priceLabel = [[UILabel alloc]initWithFrame:CGRectZero];
         _priceLabel.numberOfLines = 1;
+        _priceLabel.text = @"价格";
         _priceLabel.backgroundColor = DEBUG_COLOR;
     }
     return _priceLabel;
-}
-
-@end
-
-@implementation EGShoppingCarChoosedGoodsCell
-
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-}
-
-- (void)setModels:(NSArray *)models {
-    _models = models;
 }
 
 @end

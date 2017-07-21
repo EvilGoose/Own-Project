@@ -63,6 +63,12 @@ UICollectionViewDelegate
     
 }
 
+- (void)optionsViewDidScrollRate:(CGFloat)rate {
+    [self.bottomIndicator mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.optionsPad).offset(rate * self.optionsPad.contentSize.width);
+    }];
+}
+
 #pragma mark - setter
 
 - (void)setSelectedCell:(EGOptionTextCollectionViewCell *)selectedCell {
@@ -115,7 +121,7 @@ UICollectionViewDelegate
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    EGOptionTextCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[EGOptionTextCollectionViewCell cellResuedID] forIndexPath:indexPath];
+    EGOptionTextCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[EGOptionTextCollectionViewCell cellReusedID] forIndexPath:indexPath];
     cell.backgroundColor = DEBUG_COLOR;
     cell.title = self.data[indexPath.item];
     return cell;
@@ -134,7 +140,7 @@ UICollectionViewDelegate
         _optionsPad = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, self.cellHeight - BOTTOM_INDICATOR_HEIGHT) collectionViewLayout:flowLayout];
         _optionsPad.backgroundColor = CLEAR_COLOR;
         _optionsPad.showsHorizontalScrollIndicator = NO;
-        [_optionsPad registerClass:[EGOptionTextCollectionViewCell class] forCellWithReuseIdentifier:[EGOptionTextCollectionViewCell cellResuedID]];
+        [_optionsPad registerClass:[EGOptionTextCollectionViewCell class] forCellWithReuseIdentifier:[EGOptionTextCollectionViewCell cellReusedID]];
         _optionsPad.dataSource = self;
         _optionsPad.delegate = self;
     }

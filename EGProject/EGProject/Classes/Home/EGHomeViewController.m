@@ -163,12 +163,16 @@ UICollectionViewDataSource
 
 #pragma mark - collection view data source
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [self.optionsView optionsViewDidScrollRate:scrollView.contentOffset.x / scrollView.contentSize.width];
+}
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.controllerTitles.count;
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    EGPresentGoodsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[EGPresentGoodsCollectionViewCell cellResuedID] forIndexPath:indexPath];
+    EGPresentGoodsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[EGPresentGoodsCollectionViewCell cellReusedID] forIndexPath:indexPath];
     cell.backgroundColor = DEBUG_COLOR;
     [cell setData:self.controllerTitles[indexPath.item]];
     return cell;
@@ -187,7 +191,7 @@ UICollectionViewDataSource
         _presentContainerView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, NAVIGATION_BAR_HEIGHT + OPTIONS_VIEW_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT - NAVIGATION_BAR_HEIGHT - OPTIONS_VIEW_HEIGHT - TAB_BAR_HEIGHT) collectionViewLayout:flowLayout];
         _presentContainerView.backgroundColor = CLEAR_COLOR;
         _presentContainerView.showsHorizontalScrollIndicator = NO;
-        [_presentContainerView registerClass:[EGPresentGoodsCollectionViewCell class] forCellWithReuseIdentifier:[EGPresentGoodsCollectionViewCell cellResuedID]];
+        [_presentContainerView registerClass:[EGPresentGoodsCollectionViewCell class] forCellWithReuseIdentifier:[EGPresentGoodsCollectionViewCell cellReusedID]];
         _presentContainerView.pagingEnabled = YES;
         _presentContainerView.bounces = NO;
         _presentContainerView.dataSource = self;

@@ -15,8 +15,6 @@
 
 /**标题栏*/
 @property (strong, nonatomic)UILabel *titleLabel;
-
-/**重用标识*/
-+ (NSString *)cellResuedID;
+ 
 
 @end

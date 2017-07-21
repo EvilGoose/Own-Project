@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 #import "EGBannerCollectionViewCell.h"
+#import "EGCommentClassificationCell.h"
+#import "EGCommonGoodsCell.h"
 
 @protocol GoodsShelfBaseActionProtocal <NSObject>
 
@@ -32,8 +34,6 @@ UICollectionViewDataSource
 >
 
 SINGLETON_INTERFACE(EGGoodsShelfBaseActionHandle)
-
-- (NSString *)cellReusedID;
 
 /**delegate*/
 @property (weak, nonatomic)id<GoodsShelfBaseActionProtocal> delegate;

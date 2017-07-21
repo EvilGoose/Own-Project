@@ -39,4 +39,6 @@
 
 - (void)setSelectedItem:(NSIndexPath *)indexPath;
 
+- (void)optionsViewDidScrollRate:(CGFloat)rate;
+
 @end

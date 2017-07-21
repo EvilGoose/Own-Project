@@ -1,5 +1,5 @@
 //
-//  EGPresentGoodsCollectionViewCell.h
+//  UICollectionReusableView+ReusedCellID.h
 //  EGProject
 //
 //  Created by EG on 2017/7/21.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EGPresentGoodsCollectionViewCell : UICollectionViewCell
+@interface UICollectionReusableView (ReusedCellID)
 
-- (void)setData:(NSString *)name;
++ (NSString *)cellReusedID;
 
 @end

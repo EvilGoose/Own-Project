@@ -9,7 +9,6 @@
 #import "EGShoppingCarController.h"
 
 #import "EGShoppingCarRecommendCell.h"
-#import "EGShoppingCarChoosedGoodsCell.h"
 
 #import "EGGoodsPresentController.h"
 
@@ -99,7 +98,7 @@ UITableViewDelegate
     if (!_presentTableView) {
         _presentTableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
         [_presentTableView registerClass:EGShoppingCarRecommendCell.class forCellReuseIdentifier:NSStringFromClass(EGShoppingCarRecommendCell.class)];
-        [_presentTableView registerClass:EGShoppingCarChoosedGoodsCell.class forCellReuseIdentifier:NSStringFromClass(EGShoppingCarChoosedGoodsCell.class)];
+        [_presentTableView registerClass:UITableViewCell.class forCellReuseIdentifier:NSStringFromClass(UITableViewCell.class)];
         _presentTableView.delegate = self;
         _presentTableView.dataSource = self;
     }

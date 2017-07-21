@@ -11,7 +11,6 @@
 		B3277A908061E0D1B3A7BEEA /* libPods-EGProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E97E4415D633ABF5111C04AA /* libPods-EGProjectTests.a */; };
 		C442CD021F149EB400947616 /* EGGoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C442CD011F149EB400947616 /* EGGoodsModel.m */; };
 		C4446C0A1F10DCA5007431E8 /* EGShoppingCarRecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4446C091F10DCA5007431E8 /* EGShoppingCarRecommendCell.m */; };
-		C4446C0D1F10DD7C007431E8 /* EGShoppingCarChoosedGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4446C0C1F10DD7C007431E8 /* EGShoppingCarChoosedGoodsCell.m */; };
 		C458B7911F2094E60080DFAE /* EGCommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C458B7901F2094E60080DFAE /* EGCommonViewController.m */; };
 		C458B7941F2094FC0080DFAE /* EGTimeLimitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C458B7931F2094FC0080DFAE /* EGTimeLimitViewController.m */; };
 		C458B7971F2098080080DFAE /* EGGoodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C458B7961F2098080080DFAE /* EGGoodsViewController.m */; };
@@ -47,6 +46,9 @@
 		C4AF603C1F1DFC4400474E97 /* EGMessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AF603B1F1DFC4400474E97 /* EGMessagesViewController.m */; };
 		C4AF60401F1E072C00474E97 /* EGSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AF603F1F1E072C00474E97 /* EGSearchViewController.m */; };
 		C4AF60461F1E10F500474E97 /* EGOptionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AF60451F1E10F500474E97 /* EGOptionsView.m */; };
+		C4D28F791F21F76500CBB5EC /* EGCommonGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D28F781F21F76500CBB5EC /* EGCommonGoodsCell.m */; };
+		C4D28F7C1F21F7FE00CBB5EC /* EGCommentClassificationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D28F7B1F21F7FE00CBB5EC /* EGCommentClassificationCell.m */; };
+		C4D28F7F1F21F85000CBB5EC /* UICollectionReusableView+ReusedCellID.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D28F7E1F21F85000CBB5EC /* UICollectionReusableView+ReusedCellID.m */; };
 		C4D95A561F0C70B60058F4DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D95A551F0C70B60058F4DF /* main.m */; };
 		C4D95A591F0C70B60058F4DF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D95A581F0C70B60058F4DF /* AppDelegate.m */; };
 		C4D95A611F0C70B60058F4DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4D95A601F0C70B60058F4DF /* Assets.xcassets */; };
@@ -95,8 +97,6 @@
 		C442CD011F149EB400947616 /* EGGoodsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGGoodsModel.m; sourceTree = "<group>"; };
 		C4446C081F10DCA5007431E8 /* EGShoppingCarRecommendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGShoppingCarRecommendCell.h; sourceTree = "<group>"; };
 		C4446C091F10DCA5007431E8 /* EGShoppingCarRecommendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGShoppingCarRecommendCell.m; sourceTree = "<group>"; };
-		C4446C0B1F10DD7C007431E8 /* EGShoppingCarChoosedGoodsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGShoppingCarChoosedGoodsCell.h; sourceTree = "<group>"; };
-		C4446C0C1F10DD7C007431E8 /* EGShoppingCarChoosedGoodsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGShoppingCarChoosedGoodsCell.m; sourceTree = "<group>"; };
 		C458B78F1F2094E60080DFAE /* EGCommonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGCommonViewController.h; sourceTree = "<group>"; };
 		C458B7901F2094E60080DFAE /* EGCommonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGCommonViewController.m; sourceTree = "<group>"; };
 		C458B7921F2094FC0080DFAE /* EGTimeLimitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGTimeLimitViewController.h; sourceTree = "<group>"; };
@@ -170,6 +170,12 @@
 		C4AF603F1F1E072C00474E97 /* EGSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGSearchViewController.m; sourceTree = "<group>"; };
 		C4AF60441F1E10F500474E97 /* EGOptionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOptionsView.h; sourceTree = "<group>"; };
 		C4AF60451F1E10F500474E97 /* EGOptionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOptionsView.m; sourceTree = "<group>"; };
+		C4D28F771F21F76500CBB5EC /* EGCommonGoodsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGCommonGoodsCell.h; path = View/EGCommonGoodsCell.h; sourceTree = "<group>"; };
+		C4D28F781F21F76500CBB5EC /* EGCommonGoodsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EGCommonGoodsCell.m; path = View/EGCommonGoodsCell.m; sourceTree = "<group>"; };
+		C4D28F7A1F21F7FE00CBB5EC /* EGCommentClassificationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGCommentClassificationCell.h; sourceTree = "<group>"; };
+		C4D28F7B1F21F7FE00CBB5EC /* EGCommentClassificationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGCommentClassificationCell.m; sourceTree = "<group>"; };
+		C4D28F7D1F21F85000CBB5EC /* UICollectionReusableView+ReusedCellID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionReusableView+ReusedCellID.h"; sourceTree = "<group>"; };
+		C4D28F7E1F21F85000CBB5EC /* UICollectionReusableView+ReusedCellID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionReusableView+ReusedCellID.m"; sourceTree = "<group>"; };
 		C4D95A511F0C70B60058F4DF /* EGProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EGProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D95A551F0C70B60058F4DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C4D95A571F0C70B60058F4DF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -337,6 +343,8 @@
 				C46A37DC1F0E55E8009B0F37 /* UIColor+PDExtension.m */,
 				C46A37D31F0E5508009B0F37 /* Abstract */,
 				C46A37D41F0E5508009B0F37 /* UI */,
+				C4D28F7D1F21F85000CBB5EC /* UICollectionReusableView+ReusedCellID.h */,
+				C4D28F7E1F21F85000CBB5EC /* UICollectionReusableView+ReusedCellID.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -379,13 +387,6 @@
 			children = (
 			);
 			path = Login;
-			sourceTree = "<group>";
-		};
-		C47541E91F21AD490007C595 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		C4AED3241F1F546F00FF1403 /* Order */ = {
@@ -512,6 +513,10 @@
 		C4D95A881F0C73010058F4DF /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				C4D28F771F21F76500CBB5EC /* EGCommonGoodsCell.h */,
+				C4D28F781F21F76500CBB5EC /* EGCommonGoodsCell.m */,
+				C4D28F7A1F21F7FE00CBB5EC /* EGCommentClassificationCell.h */,
+				C4D28F7B1F21F7FE00CBB5EC /* EGCommentClassificationCell.m */,
 				C463E6891F1744A700C22840 /* Tools */,
 				C46A37DE1F0E56DD009B0F37 /* Constants */,
 				C4D95A891F0C73010058F4DF /* View */,
@@ -559,7 +564,6 @@
 				C47541E71F21A9C50007C595 /* EGGoodsShelfBaseActionHandle.m */,
 				C47541ED1F21E1940007C595 /* EGBannerCollectionViewCell.h */,
 				C47541EE1F21E1940007C595 /* EGBannerCollectionViewCell.m */,
-				C47541E91F21AD490007C595 /* Model */,
 				C4FAEDC91F18AA6800F1F124 /* Recommends */,
 				C458B78E1F2094D50080DFAE /* TimeLimit */,
 				C458B78D1F2094D50080DFAE /* Common */,
@@ -612,8 +616,6 @@
 			children = (
 				C4446C081F10DCA5007431E8 /* EGShoppingCarRecommendCell.h */,
 				C4446C091F10DCA5007431E8 /* EGShoppingCarRecommendCell.m */,
-				C4446C0B1F10DD7C007431E8 /* EGShoppingCarChoosedGoodsCell.h */,
-				C4446C0C1F10DD7C007431E8 /* EGShoppingCarChoosedGoodsCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -986,6 +988,7 @@
 				C4FAEDC21F18547900F1F124 /* EGCustomButton.m in Sources */,
 				C460EB4A1F19EE47004AD1C3 /* NSDictionary+Log.m in Sources */,
 				C4AF60401F1E072C00474E97 /* EGSearchViewController.m in Sources */,
+				C4D28F791F21F76500CBB5EC /* EGCommonGoodsCell.m in Sources */,
 				C4AED3281F1F548C00FF1403 /* EGOrderViewController.m in Sources */,
 				C4D95A591F0C70B60058F4DF /* AppDelegate.m in Sources */,
 				C47541E81F21A9C50007C595 /* EGGoodsShelfBaseActionHandle.m in Sources */,
@@ -996,7 +999,6 @@
 				C460EB441F19EA95004AD1C3 /* NSObject+AssociatedObject.m in Sources */,
 				C460EB3E1F19E6AB004AD1C3 /* NSMutableArray+Beyond.m in Sources */,
 				C48A0E861F176698003BEAC1 /* UIView+Extension.m in Sources */,
-				C4446C0D1F10DD7C007431E8 /* EGShoppingCarChoosedGoodsCell.m in Sources */,
 				C458B7941F2094FC0080DFAE /* EGTimeLimitViewController.m in Sources */,
 				C4D95A561F0C70B60058F4DF /* main.m in Sources */,
 				C45BD7C51F1F06200059E71B /* NSObject+CDD.m in Sources */,
@@ -1013,6 +1015,7 @@
 				C48A0E951F17A805003BEAC1 /* EGSearchGoodsController.m in Sources */,
 				C45BD7C41F1F06200059E71B /* CDDMutableArray.m in Sources */,
 				C458B7911F2094E60080DFAE /* EGCommonViewController.m in Sources */,
+				C4D28F7F1F21F85000CBB5EC /* UICollectionReusableView+ReusedCellID.m in Sources */,
 				C4FAEDC81F18999100F1F124 /* UIScrollView+Direction.m in Sources */,
 				C4D95AA71F0C73010058F4DF /* EGBasicViewController.m in Sources */,
 				C463E68D1F1744F000C22840 /* EGControllerTransitionManager.m in Sources */,
@@ -1033,6 +1036,7 @@
 				C46A37E11F0E57F5009B0F37 /* EGNavigationController.m in Sources */,
 				C46A37DD1F0E55E8009B0F37 /* UIColor+PDExtension.m in Sources */,
 				C4D95AAB1F0C73010058F4DF /* EGSelectController.m in Sources */,
+				C4D28F7C1F21F7FE00CBB5EC /* EGCommentClassificationCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

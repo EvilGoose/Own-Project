@@ -6,7 +6,9 @@
 //  Copyright © 2017年 EGMade. All rights reserved.
 //
 
+
 #import "EGPresentGoodsCollectionViewCell.h"
+
 #import "EGGoodsShelfBaseActionHandle.h"
 
 @interface EGPresentGoodsCollectionViewCell ()
@@ -17,8 +19,6 @@ GoodsShelfBaseActionProtocal
 /**test Label*/
 @property (strong, nonatomic)UILabel *testLabel;
 
-/**顶部滑动*/
-@property (strong, nonatomic)UIScrollView *banner;
 
 /**商品展示*/
 @property (strong, nonatomic)UICollectionView *goodsShelf;
@@ -30,13 +30,8 @@ GoodsShelfBaseActionProtocal
 
 @implementation EGPresentGoodsCollectionViewCell
 
-+ (NSString *)cellResuedID {
-    return NSStringFromClass(self);
-}
-
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-//        [self addSubview:self.banner];
         [self addSubview:self.goodsShelf];
     }
     return self;
@@ -58,17 +53,10 @@ GoodsShelfBaseActionProtocal
 
 /**需要展示的商品数据*/
 - (NSArray *)setDataSourceOfGoodsShelf {
-    return @[@1, @2, @3, @4, @1, @2, @3, @4, @1, @2, @3, @4, @1, @2, @3, @4];
+    return @[@1, @2, @3, @4, @1, @2, @3, @4, @1, @2, @3, @4, @1, @2, @3, @4, @4];
 }
 
 #pragma mark - lazy
-
-- (UIScrollView *)banner {
-    if (!_banner) {
-        _banner = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 100)];
-    }
-    return _banner;
-}
 
 - (UICollectionView *)goodsShelf {
     if (!_goodsShelf) {
@@ -76,13 +64,15 @@ GoodsShelfBaseActionProtocal
         flowLayout.minimumLineSpacing = 0;
         flowLayout.minimumInteritemSpacing = 0;
         flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
-        flowLayout.sectionInset = UIEdgeInsetsMake(0, 0, 10, 0);
         
         _goodsShelf = [[UICollectionView alloc]initWithFrame:self.bounds collectionViewLayout:flowLayout];
         _goodsShelf.backgroundColor = CLEAR_COLOR;
         _goodsShelf.showsHorizontalScrollIndicator = NO;
-        [_goodsShelf registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:[self.shelfHandle cellReusedID]];
-        [_goodsShelf registerClass:[EGBannerCollectionViewCell class] forCellWithReuseIdentifier:[EGBannerCollectionViewCell cellReusedID]];
+        
+        [_goodsShelf registerClass:EGBannerCollectionViewCell.class  forCellWithReuseIdentifier:[EGBannerCollectionViewCell cellReusedID]];
+        [_goodsShelf registerClass:EGCommentClassificationCell.class forCellWithReuseIdentifier:[EGCommentClassificationCell cellReusedID]];
+        [_goodsShelf registerClass:EGCommonGoodsCell.class forCellWithReuseIdentifier:[EGCommonGoodsCell cellReusedID]];
+        
         _goodsShelf.showsVerticalScrollIndicator = NO;
         _goodsShelf.dataSource = self.shelfHandle;
         _goodsShelf.delegate = self.shelfHandle;

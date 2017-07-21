@@ -1,5 +1,5 @@
 //
-//  EGPresentGoodsCollectionViewCell.h
+//  EGCommentClassificationCell.h
 //  EGProject
 //
 //  Created by EG on 2017/7/21.
@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EGPresentGoodsCollectionViewCell : UICollectionViewCell
+@interface EGCommentClassificationCell : UICollectionViewCell
 
-- (void)setData:(NSString *)name;
 
 @end
