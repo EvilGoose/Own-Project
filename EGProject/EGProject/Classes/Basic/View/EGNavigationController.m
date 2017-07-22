@@ -67,9 +67,7 @@ UIGestureRecognizerDelegate
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle{
-    
     return self.topViewController.preferredStatusBarStyle;
-    
 }
 
 @end

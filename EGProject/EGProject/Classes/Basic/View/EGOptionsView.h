@@ -37,7 +37,10 @@
 /**data source*/
 @property (weak, nonatomic)id<OptionsViewDataSource> dataSource;
 
-- (void)setSelectedItem:(NSIndexPath *)indexPath;
+/**最大化选中item字体*/
+@property (assign, nonatomic)BOOL selectedBold;
+
+- (instancetype)initWithFrame:(CGRect)frame direction:(UICollectionViewScrollDirection)direction;
 
 - (void)optionsViewDidScrollRate:(CGFloat)rate;
 

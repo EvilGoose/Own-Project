@@ -24,8 +24,18 @@
     //导航栏高度
 #define NAVIGATION_BAR_HEIGHT 64
 
+    //状态栏高度
+#define STATUS_BAR_HEIGHT 20
+
+    //搜索栏高度
+#define SEARCH_BAR_HEIGHT 40
+
+
     //横向选项板高度（首页）
 #define OPTIONS_VIEW_HEIGHT 30
+
+#define OPTIONS_VIEW_WIDTH 80
+
 
     //Tab bar 高度
 #define TAB_BAR_HEIGHT 49
@@ -34,7 +44,7 @@
 #define BANNER_HEIGHT 168
 
     //商品cell 高度
-#define GOODS_CELL_HEIGHT 180
+#define GOODS_CELL_HEIGHT 240
 
     //间隔
 #define CUSTOM_HORIZON_MARGIN 10

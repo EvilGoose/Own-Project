@@ -152,7 +152,6 @@ UICollectionViewDataSource
 #pragma mark - options view delegate & data source
 
 - (void)optionsView:(EGOptionsView *)optionsView didSelected:(NSInteger)index {
-    NSLog(@"%ld", (long)index)
     NSIndexPath *path = [NSIndexPath indexPathForRow:index inSection:0];
     [self.presentContainerView scrollToItemAtIndexPath:path atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
 }
@@ -174,7 +173,6 @@ UICollectionViewDataSource
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     EGPresentGoodsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[EGPresentGoodsCollectionViewCell cellReusedID] forIndexPath:indexPath];
     cell.backgroundColor = DEBUG_COLOR;
-    [cell setData:self.controllerTitles[indexPath.item]];
     return cell;
 }
 
@@ -202,7 +200,7 @@ UICollectionViewDataSource
 
 - (EGOptionsView *)optionsView {
     if (!_optionsView) {
-        _optionsView = [[EGOptionsView alloc]initWithFrame:CGRectMake(0, NAVIGATION_BAR_HEIGHT, SCREEN_WIDTH, OPTIONS_VIEW_HEIGHT)];
+        _optionsView = [[EGOptionsView alloc]initWithFrame:CGRectMake(0, NAVIGATION_BAR_HEIGHT, SCREEN_WIDTH, OPTIONS_VIEW_HEIGHT) direction:UICollectionViewScrollDirectionHorizontal];
         _optionsView.backgroundColor = DEBUG_COLOR;
         _optionsView.delegate = self;
         _optionsView.dataSource = self;

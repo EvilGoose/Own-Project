@@ -51,7 +51,8 @@ UITableViewDelegate
     spaceItem.width = -20;
     
     item.rightBarButtonItems = @[spaceItem,editItem];
-//    editButton.hidden = YES;
+
+
 }
 
 - (void)editShoppingCar {

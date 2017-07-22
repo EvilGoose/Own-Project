@@ -16,10 +16,6 @@
 GoodsShelfBaseActionProtocal
 >
 
-/**test Label*/
-@property (strong, nonatomic)UILabel *testLabel;
-
-
 /**商品展示*/
 @property (strong, nonatomic)UICollectionView *goodsShelf;
 
@@ -36,10 +32,7 @@ GoodsShelfBaseActionProtocal
     }
     return self;
 }
-
-- (void)setData:(NSString *)name {
-    self.testLabel.text = name;
-}
+ 
 #pragma mark - delegate
 
 - (void)goodsShelfChooseGoods:(NSIndexPath *)indexPath {
@@ -78,13 +71,6 @@ GoodsShelfBaseActionProtocal
         _goodsShelf.delegate = self.shelfHandle;
     }
     return _goodsShelf;
-}
-
-- (UILabel *)testLabel {
-    if (!_testLabel) {
-        _testLabel = [[UILabel alloc]initWithFrame:CGRectMake(100, 300, 100, 40)];
-    }
-    return _testLabel;
 }
 
 - (EGGoodsShelfBaseActionHandle *)shelfHandle {

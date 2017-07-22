@@ -44,6 +44,7 @@ UINavigationControllerDelegate
     
         // 自定义的导航栏
     [self.view addSubview:self.customNavigationBar];
+ 
     self.customNavigationBar.items = @[self.customNavigationItem];
 
 }
@@ -56,8 +57,9 @@ UINavigationControllerDelegate
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
+
     [self.customNavigationBar mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.right.equalTo(self.view);
+        make.top.left.right.equalTo(self.view);
         make.height.equalTo(@(NAVIGATION_BAR_HEIGHT));
     }];
     
@@ -82,8 +84,6 @@ UINavigationControllerDelegate
 }
 
 #pragma mark - navigation animation delegate
-
-
 
 #pragma mark - lazy
 
@@ -116,6 +116,5 @@ UINavigationControllerDelegate
     }
     return _bottomSeperator;
 }
-
 
 @end

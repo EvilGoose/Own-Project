@@ -24,6 +24,9 @@ UICollectionViewDelegate
 /**底部指示条*/
 @property (strong, nonatomic)UIImageView *bottomIndicator;
 
+/**scroll direction*/
+@property (assign, nonatomic)UICollectionViewScrollDirection direction;
+
 /**data*/
 @property (copy, nonatomic)NSArray<NSString *> *data;
 
@@ -38,10 +41,20 @@ UICollectionViewDelegate
 
 @implementation EGOptionsView
 
-- (instancetype)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame direction:(UICollectionViewScrollDirection)direction {
     if (self = [super initWithFrame:frame]) {
+        NSLog(@"self.direction %@", self.direction == UICollectionViewScrollDirectionVertical ? @"V" : @"H")
+        self.direction = direction;
         [self.optionsPad addSubview:self.bottomIndicator];
         [self addSubview:self.optionsPad];
+    }
+    return self;
+}
+
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        NSAssert(!self, @"Could not initial with this method %s", __func__);
     }
     return self;
 }
@@ -52,21 +65,34 @@ UICollectionViewDelegate
         make.top.left.right.bottom.mas_equalTo(self);
     }];
     
-    [self.bottomIndicator mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.optionsPad).offset(self.height - BOTTOM_INDICATOR_HEIGHT);
-        make.left.mas_equalTo(self.optionsPad);
-        make.size.mas_equalTo(CGSizeMake(self.cellWidth, BOTTOM_INDICATOR_HEIGHT));
-    }];
-}
-
-- (void)setSelectedItem:(NSIndexPath *)indexPath {
+    if (self.direction == UICollectionViewScrollDirectionHorizontal) {
+        [self.bottomIndicator mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.optionsPad).offset(self.height - BOTTOM_INDICATOR_HEIGHT);
+            make.left.mas_equalTo(self.optionsPad);
+            make.size.mas_equalTo(CGSizeMake(self.cellWidth, BOTTOM_INDICATOR_HEIGHT));
+        }];
+        
+    }else {
+        [self.bottomIndicator mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.left.mas_equalTo(self.optionsPad);
+            make.size.mas_equalTo(CGSizeMake(BOTTOM_INDICATOR_HEIGHT, self.cellHeight));
+        }];
+    }
     
 }
 
 - (void)optionsViewDidScrollRate:(CGFloat)rate {
-    [self.bottomIndicator mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.optionsPad).offset(rate * self.optionsPad.contentSize.width);
-    }];
+    if (self.direction == UICollectionViewScrollDirectionHorizontal) {
+        [self.bottomIndicator mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(self.optionsPad).offset(rate * self.optionsPad.contentSize.width);
+        }];
+        
+    }else {
+        [self.bottomIndicator mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.optionsPad).offset(rate * self.optionsPad.contentSize.height);
+        }];
+        
+    }
 }
 
 #pragma mark - setter
@@ -74,10 +100,14 @@ UICollectionViewDelegate
 - (void)setSelectedCell:(EGOptionTextCollectionViewCell *)selectedCell {
     if (_selectedCell) {
         _selectedCell.titleLabel.textColor = GRAY_COLOR;
+        _selectedCell.titleLabel.font = SYSTEM_FONT(10);
     }
 
     _selectedCell = selectedCell;
+    
+    if (self.selectedBold) _selectedCell.titleLabel.font = SYSTEM_BOLD_FONT(12);
     selectedCell.titleLabel.textColor = RED_COLOR;
+    
 }
 
 - (void)setDelegate:(id<OptionsViewDelegate>)delegate {
@@ -105,13 +135,26 @@ UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     self.selectedCell = (EGOptionTextCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
     
-    [self.bottomIndicator mas_updateConstraints:^(MASConstraintMaker *make) {
-         make.left.mas_equalTo(self.optionsPad).offset(self.cellWidth * indexPath.item);
-     }];
-
     if ([self.delegate respondsToSelector:@selector(optionsView:didSelected:)]) {
         [self.delegate optionsView:self didSelected:indexPath.item];
     }
+
+    if (self.direction == UICollectionViewScrollDirectionHorizontal) {
+        [self.bottomIndicator mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(self.optionsPad).offset(self.cellWidth * indexPath.item);
+        }];
+        
+    }else {
+        [self.bottomIndicator mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.optionsPad).offset(self.cellHeight * indexPath.item);
+        }];
+        
+    }
+
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(self.cellWidth, self.cellHeight);
 }
 
 #pragma mark - data source
@@ -134,7 +177,7 @@ UICollectionViewDelegate
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
         flowLayout.minimumLineSpacing = 0;
         flowLayout.minimumInteritemSpacing = 0;
-        flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        flowLayout.scrollDirection = self.direction;
         flowLayout.itemSize = CGSizeMake(self.cellWidth, self.cellHeight);
         
         _optionsPad = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, self.cellHeight - BOTTOM_INDICATOR_HEIGHT) collectionViewLayout:flowLayout];
@@ -167,7 +210,7 @@ UICollectionViewDelegate
     if (_cellHeight) {
         return _cellHeight;
     }else {
-        return self.height;
+        return OPTIONS_VIEW_HEIGHT;
     }
 }
 

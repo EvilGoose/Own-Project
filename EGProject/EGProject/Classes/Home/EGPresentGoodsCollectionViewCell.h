@@ -10,6 +10,4 @@
 
 @interface EGPresentGoodsCollectionViewCell : UICollectionViewCell
 
-- (void)setData:(NSString *)name;
-
 @end

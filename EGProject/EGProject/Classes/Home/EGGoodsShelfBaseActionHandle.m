@@ -28,7 +28,7 @@ SINGLETON_IMPLEMENTATION(EGGoodsShelfBaseActionHandle)
         return CGSizeMake(SCREEN_WIDTH, 80);
     
     }else {
-        return CGSizeMake(SCREEN_WIDTH *.5, GOODS_CELL_HEIGHT);
+        return CGSizeMake(SCREEN_WIDTH *.5 - 2, GOODS_CELL_HEIGHT);
         
     }
 }
