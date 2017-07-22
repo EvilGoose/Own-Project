@@ -70,6 +70,7 @@
 		C4FAEDD01F18AAA200F1F124 /* EGSpecialController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FAEDCF1F18AAA200F1F124 /* EGSpecialController.m */; };
 		C4FC54BB1F23170700851BB7 /* EGCameraManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FC54BA1F23170700851BB7 /* EGCameraManager.m */; };
 		C4FC54C11F231C1900851BB7 /* EGSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FC54C01F231C1900851BB7 /* EGSearchBar.m */; };
+		C4FC54C41F233D4200851BB7 /* EGSpecialTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FC54C31F233D4200851BB7 /* EGSpecialTableViewCell.m */; };
 		C598291833CCF5F64DD1AC41 /* libPods-EGProjectUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5932B408CEB749223A6661 /* libPods-EGProjectUITests.a */; };
 /* End PBXBuildFile section */
 
@@ -221,6 +222,8 @@
 		C4FC54BA1F23170700851BB7 /* EGCameraManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGCameraManager.m; sourceTree = "<group>"; };
 		C4FC54BF1F231C1900851BB7 /* EGSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGSearchBar.h; sourceTree = "<group>"; };
 		C4FC54C01F231C1900851BB7 /* EGSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGSearchBar.m; sourceTree = "<group>"; };
+		C4FC54C21F233D4200851BB7 /* EGSpecialTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGSpecialTableViewCell.h; sourceTree = "<group>"; };
+		C4FC54C31F233D4200851BB7 /* EGSpecialTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGSpecialTableViewCell.m; sourceTree = "<group>"; };
 		D2708E533CFA0CA5D1C47C18 /* Pods-EGProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-EGProject/Pods-EGProject.release.xcconfig"; sourceTree = "<group>"; };
 		D400CE82038D6DE093148400 /* Pods-EGProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EGProjectTests/Pods-EGProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DBB41D69B4A0EA14AD384518 /* Pods-EGProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EGProjectUITests/Pods-EGProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -525,8 +528,8 @@
 				C4D28F781F21F76500CBB5EC /* EGCommonGoodsCell.m */,
 				C4D28F7A1F21F7FE00CBB5EC /* EGCommentClassificationCell.h */,
 				C4D28F7B1F21F7FE00CBB5EC /* EGCommentClassificationCell.m */,
-				C463E6891F1744A700C22840 /* Tools */,
 				C46A37DE1F0E56DD009B0F37 /* Constants */,
+				C463E6891F1744A700C22840 /* Tools */,
 				C4D95A891F0C73010058F4DF /* View */,
 			);
 			path = Basic;
@@ -587,6 +590,8 @@
 			children = (
 				C4D95A961F0C73010058F4DF /* EGSelectController.h */,
 				C4D95A971F0C73010058F4DF /* EGSelectController.m */,
+				C4FC54C21F233D4200851BB7 /* EGSpecialTableViewCell.h */,
+				C4FC54C31F233D4200851BB7 /* EGSpecialTableViewCell.m */,
 			);
 			path = Select;
 			sourceTree = "<group>";
@@ -1019,6 +1024,7 @@
 				C460EB471F19EE22004AD1C3 /* NSArray+Log.m in Sources */,
 				C460EB3B1F19E674004AD1C3 /* NSArray+Beyond.m in Sources */,
 				C48A0E9B1F17AA81003BEAC1 /* UIBarButtonItem+BarButtonItemWithButton.m in Sources */,
+				C4FC54C41F233D4200851BB7 /* EGSpecialTableViewCell.m in Sources */,
 				C4FAEDD01F18AAA200F1F124 /* EGSpecialController.m in Sources */,
 				C4AED3201F1F3F8700FF1403 /* EGOptionTextCollectionViewCell.m in Sources */,
 				C4AF603C1F1DFC4400474E97 /* EGMessagesViewController.m in Sources */,

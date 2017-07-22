@@ -13,3 +13,9 @@
 + (NSString *)cellReusedID;
 
 @end
+
+@interface UITableViewCell (ReusedCellID)
+
++ (NSString *)cellReusedID;
+
+@end

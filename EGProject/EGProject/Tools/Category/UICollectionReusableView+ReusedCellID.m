@@ -15,3 +15,11 @@
 }
 
 @end
+
+@implementation UITableViewCell (ReusedCellID)
+
++ (NSString *)cellReusedID {
+    return NSStringFromClass(self);
+}
+
+@end
