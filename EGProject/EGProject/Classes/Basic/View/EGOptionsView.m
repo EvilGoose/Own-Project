@@ -43,9 +43,7 @@ UICollectionViewDelegate
 
 - (instancetype)initWithFrame:(CGRect)frame direction:(UICollectionViewScrollDirection)direction {
     if (self = [super initWithFrame:frame]) {
-        NSLog(@"self.direction %@", self.direction == UICollectionViewScrollDirectionVertical ? @"V" : @"H")
         self.direction = direction;
-        [self.optionsPad addSubview:self.bottomIndicator];
         [self addSubview:self.optionsPad];
     }
     return self;
@@ -148,9 +146,7 @@ UICollectionViewDelegate
         [self.bottomIndicator mas_updateConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.optionsPad).offset(self.cellHeight * indexPath.item);
         }];
-        
     }
-
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -179,11 +175,13 @@ UICollectionViewDelegate
         flowLayout.minimumInteritemSpacing = 0;
         flowLayout.scrollDirection = self.direction;
         flowLayout.itemSize = CGSizeMake(self.cellWidth, self.cellHeight);
-        
+
         _optionsPad = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, self.cellHeight - BOTTOM_INDICATOR_HEIGHT) collectionViewLayout:flowLayout];
         _optionsPad.backgroundColor = CLEAR_COLOR;
         _optionsPad.showsHorizontalScrollIndicator = NO;
+        _optionsPad.showsVerticalScrollIndicator = NO;
         [_optionsPad registerClass:[EGOptionTextCollectionViewCell class] forCellWithReuseIdentifier:[EGOptionTextCollectionViewCell cellReusedID]];
+        [_optionsPad addSubview:self.bottomIndicator];
         _optionsPad.dataSource = self;
         _optionsPad.delegate = self;
     }

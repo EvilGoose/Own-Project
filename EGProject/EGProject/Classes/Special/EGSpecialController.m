@@ -7,22 +7,18 @@
 //
 
 #import "EGSpecialController.h"
-#import "EGOfficialRecommendController.h"
 
-#import "EGOptionsView.h"
-#import "EGSearchBar.h"
+#import "EGSpecialTopCollectionTableViewCell.h"
+#import "EGSpecialTableViewCell.h"
 
-@interface EGSpecialController ()
-<
-OptionsViewDelegate,
-OptionsViewDataSource,
-UISearchBarDelegate
->
-/**左边选项栏*/
-@property (strong, nonatomic)EGOptionsView *leftVerticalOptionsView;
+ @interface EGSpecialController ()
+ <
+ UITableViewDelegate,
+ UITableViewDataSource
+ >
 
-/**右边展示栏*/
-@property (strong, nonatomic)UIScrollView *rightPresentSpecialView;
+ /**table view*/
+@property (strong, nonatomic)UITableView *tableView;
 
 @end
 
@@ -30,70 +26,71 @@ UISearchBarDelegate
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    [self.view addSubview:self.leftVerticalOptionsView];
-    [self.view addSubview:self.rightPresentSpecialView];
-    [self configureNavigationTitleView];
+        // Do any additional setup after loading the view.
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    [self.view addSubview:self.tableView];
 }
 
-- (void)configureNavigationTitleView {
-    EGSearchBar *searchBar = [[EGSearchBar alloc]initWithFrame:CGRectMake(0, CUSTOM_VERTICAL_MARGIN, SCREEN_WIDTH - 2 * CUSTOM_HORIZON_MARGIN, SEARCH_BAR_HEIGHT)];
-    searchBar.contentMode = UIViewContentModeBottom;
-    searchBar.placeholder = @"点击搜索";
-    searchBar.delegate = self;
-    self.navigationItem.titleView = searchBar;
-}
-
-#pragma mark - search bar delegate
-- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
-    EGOfficialRecommendController *viewController = [EGOfficialRecommendController new];
-    [self presentViewController:viewController animated:YES completion:^{
-        [viewController testBlock:^{
-            NSLog(@"Hello world")
-        }];
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.view).offset(NAVIGATION_BAR_HEIGHT);
+        make.left.right.mas_equalTo(self.view);
+        make.height.mas_equalTo(SCREEN_HEIGHT - NAVIGATION_BAR_HEIGHT - TAB_BAR_HEIGHT);
     }];
 }
 
-
-#pragma mark - options view
-
-- (CGFloat)optionsViewSetItemWidth:(EGOptionsView *)optionsView {
-    return OPTIONS_VIEW_WIDTH;
+- (void)configureNavigationItem:(UINavigationItem *)item NavigationBar:(UINavigationBar *)bar {
+    item.title = @"专题";
 }
 
-- (CGFloat)optionsViewSetItemHeight:(EGOptionsView *)optionsView {
-    return 40;
+#pragma mark - table view height
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        return 80;
+    }
+    return 200;
 }
 
-- (void)optionsView:(EGOptionsView *)optionsView didSelected:(NSInteger)index {
-	NSLog(@"%ld", index)
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 0.01;
 }
- 
-- (NSArray *)setDataSourceOptionView:(EGOptionsView *)optionsView {
-    return @[@"标题1", @"标题2", @"标题3", @"标题4", @"标题5", @"标题6", @"标题7", @"标题8", @"标题9", @"标题10", @"标题11" ,@"标题1", @"标题2", @"标题3", @"标题4", @"标题5", @"标题6", @"标题7", @"标题8", @"标题9", @"标题10",];
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 10;
+}
+
+#pragma mark - table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 11;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
+}
+
+- (__kindof UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        return [[EGSpecialTopCollectionTableViewCell alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 80)];
+    }
+    EGSpecialTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[EGSpecialTableViewCell cellReusedID]];
+    return cell;
 }
 
 #pragma mark - lazy
 
-- (EGOptionsView *)leftVerticalOptionsView {
-    if (!_leftVerticalOptionsView) {
-        _leftVerticalOptionsView = [[EGOptionsView alloc]initWithFrame:CGRectMake(0, NAVIGATION_BAR_HEIGHT, OPTIONS_VIEW_WIDTH, SCREEN_HEIGHT - NAVIGATION_BAR_HEIGHT - TAB_BAR_HEIGHT) direction:UICollectionViewScrollDirectionVertical];
-        _leftVerticalOptionsView.backgroundColor = DEBUG_COLOR;
-        _leftVerticalOptionsView.selectedBold = YES;
-        _leftVerticalOptionsView.delegate = self;
-        _leftVerticalOptionsView.dataSource = self;
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStyleGrouped];
+        [_tableView registerClass:EGSpecialTableViewCell.class forCellReuseIdentifier:[EGSpecialTableViewCell cellReusedID]];
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.delegate= self;
+        _tableView.dataSource = self;
     }
-    return _leftVerticalOptionsView;
-}
-
-- (UIScrollView *)rightPresentSpecialView {
-    if (!_rightPresentSpecialView) {
-        _rightPresentSpecialView = [[UIScrollView alloc] initWithFrame:CGRectMake(OPTIONS_VIEW_WIDTH, NAVIGATION_BAR_HEIGHT, SCREEN_WIDTH - OPTIONS_VIEW_WIDTH, SCREEN_HEIGHT - NAVIGATION_BAR_HEIGHT - TAB_BAR_HEIGHT)];
-        _rightPresentSpecialView.contentSize = CGSizeMake(SCREEN_WIDTH - OPTIONS_VIEW_WIDTH, (SCREEN_HEIGHT - NAVIGATION_BAR_HEIGHT - TAB_BAR_HEIGHT) * 21);
-        _rightPresentSpecialView.backgroundColor = DEBUG_COLOR;
-        _rightPresentSpecialView.pagingEnabled = YES;
-    }
-    return _rightPresentSpecialView;
+    return _tableView;
 }
 
 @end
+ 

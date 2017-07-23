@@ -6,8 +6,8 @@
 //  Copyright © 2017年 EGMade. All rights reserved.
 //
 
-#import "EGBasicViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface EGSelectController : EGBasicViewController
+@interface EGSelectController : UIViewController
 
 @end

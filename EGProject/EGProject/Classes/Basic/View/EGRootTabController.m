@@ -39,23 +39,23 @@
 - (void)initChildControllers {
     [self addChildViewController:[self addChildViewController:[EGHomeViewController new]
                                                         title:@"首页"
-                                                    imageName:@"Home_default"
-                                            selectedImageName:@"Home_selected"]];
-    
+                                                    imageName:@"commoditydetail_ic_details_home_black_31x31_"
+                                            selectedImageName:@"commoditydetail_ic_details_home_black_pressed_31x31_"]];
+
     [self addChildViewController:[self addChildViewController:[EGSpecialController new]
+                                                        title:@"专题"
+                                                    imageName:@"Center_default"
+                                            selectedImageName:@"Center_selected"]];
+
+    [self addChildViewController:[self addChildViewController:[EGSelectController new]
                                                         title:@"分类"
                                                     imageName:@"Media_default"
                                             selectedImageName:@"Media_selected"]];
 
-    [self addChildViewController:[self addChildViewController:[EGSelectController new]
-                                                        title:@"专题"
-                                                    imageName:@"Craft"
-                                            selectedImageName:@""]];                                  
-    
     [self addChildViewController:[self addChildViewController:[EGShoppingCarController new]
                                                         title:@"购物车"
-                                                    imageName:@"Record_default"
-                                            selectedImageName:@"Record_selected"]];
+                                                    imageName:@"commoditydetail_ic_menu_shoping_nor_20x20_"
+                                            selectedImageName:@"commoditydetail_ic_menu_shoping_pressed_20x20_"]];
     
     [self addChildViewController:[self addChildViewController:[EGUserController new]
                                                         title:@"个人"
