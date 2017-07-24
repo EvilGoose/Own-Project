@@ -14,6 +14,8 @@
 		91BC519E1F24F66D0074D865 /* EGOfficialRecommendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91BC519B1F24F66D0074D865 /* EGOfficialRecommendController.m */; };
 		91BC519F1F24F66D0074D865 /* EGSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 91BC519D1F24F66D0074D865 /* EGSearchBar.m */; };
 		B3277A908061E0D1B3A7BEEA /* libPods-EGProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E97E4415D633ABF5111C04AA /* libPods-EGProjectTests.a */; };
+		C41131E11F261DAA00DAE972 /* EGOrderBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C41131E01F261DAA00DAE972 /* EGOrderBar.m */; };
+		C41131E41F261FFD00DAE972 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C41131E31F261FFD00DAE972 /* UIImage+Extension.m */; };
 		C442CD021F149EB400947616 /* EGGoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C442CD011F149EB400947616 /* EGGoodsModel.m */; };
 		C4446C0A1F10DCA5007431E8 /* EGShoppingCarRecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4446C091F10DCA5007431E8 /* EGShoppingCarRecommendCell.m */; };
 		C458B7911F2094E60080DFAE /* EGCommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C458B7901F2094E60080DFAE /* EGCommonViewController.m */; };
@@ -106,6 +108,10 @@
 		91BC519D1F24F66D0074D865 /* EGSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGSearchBar.m; sourceTree = "<group>"; };
 		A17F8352A51A27CB4C5A1BD7 /* Pods-EGProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EGProjectTests/Pods-EGProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		A98F6E4E5E5FF6BAFDF37C4E /* Pods-EGProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EGProjectUITests/Pods-EGProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C41131DF1F261DAA00DAE972 /* EGOrderBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOrderBar.h; sourceTree = "<group>"; };
+		C41131E01F261DAA00DAE972 /* EGOrderBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOrderBar.m; sourceTree = "<group>"; };
+		C41131E21F261FFD00DAE972 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		C41131E31F261FFD00DAE972 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		C442CD001F149EB400947616 /* EGGoodsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGGoodsModel.h; sourceTree = "<group>"; };
 		C442CD011F149EB400947616 /* EGGoodsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGGoodsModel.m; sourceTree = "<group>"; };
 		C4446C081F10DCA5007431E8 /* EGShoppingCarRecommendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGShoppingCarRecommendCell.h; sourceTree = "<group>"; };
@@ -359,6 +365,8 @@
 				C46A37D41F0E5508009B0F37 /* UI */,
 				C4D28F7D1F21F85000CBB5EC /* UICollectionReusableView+ReusedCellID.h */,
 				C4D28F7E1F21F85000CBB5EC /* UICollectionReusableView+ReusedCellID.m */,
+				C41131E21F261FFD00DAE972 /* UIImage+Extension.h */,
+				C41131E31F261FFD00DAE972 /* UIImage+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -453,6 +461,7 @@
 				C4D95A6D1F0C70B60058F4DF /* EGProjectTests */,
 				C4D95A781F0C70B60058F4DF /* EGProjectUITests */,
 				C4D95A521F0C70B60058F4DF /* Products */,
+				C4D95AA51F0C73010058F4DF /* Resources */,
 				55B31262B05D695648A8A40C /* Pods */,
 				30B1311F799A666A746B6CD9 /* Frameworks */,
 			);
@@ -475,7 +484,6 @@
 				C4D95A581F0C70B60058F4DF /* AppDelegate.m */,
 				C4D95A871F0C73010058F4DF /* Classes */,
 				C4D95AA61F0C73010058F4DF /* Tools */,
-				C4D95AA51F0C73010058F4DF /* Resources */,
 				C4D95AAF1F0C758C0058F4DF /* BasicInfo */,
 				C4D95A541F0C70B60058F4DF /* Supporting Files */,
 			);
@@ -634,6 +642,8 @@
 			children = (
 				C4446C081F10DCA5007431E8 /* EGShoppingCarRecommendCell.h */,
 				C4446C091F10DCA5007431E8 /* EGShoppingCarRecommendCell.m */,
+				C41131DF1F261DAA00DAE972 /* EGOrderBar.h */,
+				C41131E01F261DAA00DAE972 /* EGOrderBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -675,7 +685,8 @@
 				C4F69E371F0E6BB000F3F359 /* scan_success.wav */,
 				C4D95A601F0C70B60058F4DF /* Assets.xcassets */,
 			);
-			path = Resources;
+			name = Resources;
+			path = EGProject/Resources;
 			sourceTree = "<group>";
 		};
 		C4D95AA61F0C73010058F4DF /* Tools */ = {
@@ -1018,6 +1029,7 @@
 				91BC519E1F24F66D0074D865 /* EGOfficialRecommendController.m in Sources */,
 				C4D95AAD1F0C73010058F4DF /* EGTestFunctionsController.m in Sources */,
 				C4D95AAE1F0C73010058F4DF /* EGUserController.m in Sources */,
+				C41131E41F261FFD00DAE972 /* UIImage+Extension.m in Sources */,
 				C460EB441F19EA95004AD1C3 /* NSObject+AssociatedObject.m in Sources */,
 				91BC51971F24F6390074D865 /* EGSpecialTopCollectionTableViewCell.m in Sources */,
 				C460EB3E1F19E6AB004AD1C3 /* NSMutableArray+Beyond.m in Sources */,
@@ -1039,6 +1051,7 @@
 				C4FC54BB1F23170700851BB7 /* EGCameraManager.m in Sources */,
 				C45BD7C41F1F06200059E71B /* CDDMutableArray.m in Sources */,
 				C458B7911F2094E60080DFAE /* EGCommonViewController.m in Sources */,
+				C41131E11F261DAA00DAE972 /* EGOrderBar.m in Sources */,
 				C4D28F7F1F21F85000CBB5EC /* UICollectionReusableView+ReusedCellID.m in Sources */,
 				C4FAEDC81F18999100F1F124 /* UIScrollView+Direction.m in Sources */,
 				C4D95AA71F0C73010058F4DF /* EGBasicViewController.m in Sources */,
