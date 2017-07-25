@@ -30,6 +30,9 @@
     //搜索栏高度
 #define SEARCH_BAR_HEIGHT 40
 
+#define ORDER_BAR_HEIGHT 44
+
+
 
     //横向选项板高度（首页）
 #define OPTIONS_VIEW_HEIGHT 30

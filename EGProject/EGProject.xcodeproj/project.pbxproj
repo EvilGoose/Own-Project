@@ -34,6 +34,9 @@
 		C463E68D1F1744F000C22840 /* EGControllerTransitionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C463E68C1F1744F000C22840 /* EGControllerTransitionManager.m */; };
 		C46A37DD1F0E55E8009B0F37 /* UIColor+PDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C46A37DC1F0E55E8009B0F37 /* UIColor+PDExtension.m */; };
 		C46A37E11F0E57F5009B0F37 /* EGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C46A37E01F0E57F5009B0F37 /* EGNavigationController.m */; };
+		C46AA9481F26E6F600DCE49B /* EGShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C46AA9471F26E6F600DCE49B /* EGShareViewController.m */; };
+		C46AA94C1F26ED3E00DCE49B /* EGTestXIBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C46AA94A1F26ED3E00DCE49B /* EGTestXIBViewController.m */; };
+		C46AA94D1F26ED3E00DCE49B /* EGTestXIBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C46AA94B1F26ED3E00DCE49B /* EGTestXIBViewController.xib */; };
 		C47541E51F21A6190007C595 /* EGPresentGoodsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C47541E41F21A6190007C595 /* EGPresentGoodsCollectionViewCell.m */; };
 		C47541E81F21A9C50007C595 /* EGGoodsShelfBaseActionHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = C47541E71F21A9C50007C595 /* EGGoodsShelfBaseActionHandle.m */; };
 		C47541EF1F21E1940007C595 /* EGBannerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C47541EE1F21E1940007C595 /* EGBannerCollectionViewCell.m */; };
@@ -151,6 +154,11 @@
 		C46A37DC1F0E55E8009B0F37 /* UIColor+PDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PDExtension.m"; sourceTree = "<group>"; };
 		C46A37DF1F0E57F5009B0F37 /* EGNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGNavigationController.h; sourceTree = "<group>"; };
 		C46A37E01F0E57F5009B0F37 /* EGNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGNavigationController.m; sourceTree = "<group>"; };
+		C46AA9461F26E6F600DCE49B /* EGShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGShareViewController.h; sourceTree = "<group>"; };
+		C46AA9471F26E6F600DCE49B /* EGShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGShareViewController.m; sourceTree = "<group>"; };
+		C46AA9491F26ED3E00DCE49B /* EGTestXIBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGTestXIBViewController.h; sourceTree = "<group>"; };
+		C46AA94A1F26ED3E00DCE49B /* EGTestXIBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGTestXIBViewController.m; sourceTree = "<group>"; };
+		C46AA94B1F26ED3E00DCE49B /* EGTestXIBViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EGTestXIBViewController.xib; sourceTree = "<group>"; };
 		C47541E31F21A6190007C595 /* EGPresentGoodsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGPresentGoodsCollectionViewCell.h; sourceTree = "<group>"; };
 		C47541E41F21A6190007C595 /* EGPresentGoodsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGPresentGoodsCollectionViewCell.m; sourceTree = "<group>"; };
 		C47541E61F21A9C50007C595 /* EGGoodsShelfBaseActionHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGGoodsShelfBaseActionHandle.h; sourceTree = "<group>"; };
@@ -187,10 +195,10 @@
 		C4AF603F1F1E072C00474E97 /* EGSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGSearchViewController.m; sourceTree = "<group>"; };
 		C4AF60441F1E10F500474E97 /* EGOptionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOptionsView.h; sourceTree = "<group>"; };
 		C4AF60451F1E10F500474E97 /* EGOptionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOptionsView.m; sourceTree = "<group>"; };
-		C4D28F771F21F76500CBB5EC /* EGCommonGoodsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGCommonGoodsCell.h; path = View/EGCommonGoodsCell.h; sourceTree = "<group>"; };
-		C4D28F781F21F76500CBB5EC /* EGCommonGoodsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EGCommonGoodsCell.m; path = View/EGCommonGoodsCell.m; sourceTree = "<group>"; };
-		C4D28F7A1F21F7FE00CBB5EC /* EGCommentClassificationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGCommentClassificationCell.h; sourceTree = "<group>"; };
-		C4D28F7B1F21F7FE00CBB5EC /* EGCommentClassificationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGCommentClassificationCell.m; sourceTree = "<group>"; };
+		C4D28F771F21F76500CBB5EC /* EGCommonGoodsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGCommonGoodsCell.h; sourceTree = "<group>"; };
+		C4D28F781F21F76500CBB5EC /* EGCommonGoodsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGCommonGoodsCell.m; sourceTree = "<group>"; };
+		C4D28F7A1F21F7FE00CBB5EC /* EGCommentClassificationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EGCommentClassificationCell.h; path = ../EGCommentClassificationCell.h; sourceTree = "<group>"; };
+		C4D28F7B1F21F7FE00CBB5EC /* EGCommentClassificationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EGCommentClassificationCell.m; path = ../EGCommentClassificationCell.m; sourceTree = "<group>"; };
 		C4D28F7D1F21F85000CBB5EC /* UICollectionReusableView+ReusedCellID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionReusableView+ReusedCellID.h"; sourceTree = "<group>"; };
 		C4D28F7E1F21F85000CBB5EC /* UICollectionReusableView+ReusedCellID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionReusableView+ReusedCellID.m"; sourceTree = "<group>"; };
 		C4D95A511F0C70B60058F4DF /* EGProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EGProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -535,10 +543,8 @@
 		C4D95A881F0C73010058F4DF /* Basic */ = {
 			isa = PBXGroup;
 			children = (
-				C4D28F771F21F76500CBB5EC /* EGCommonGoodsCell.h */,
-				C4D28F781F21F76500CBB5EC /* EGCommonGoodsCell.m */,
-				C4D28F7A1F21F7FE00CBB5EC /* EGCommentClassificationCell.h */,
-				C4D28F7B1F21F7FE00CBB5EC /* EGCommentClassificationCell.m */,
+				C46AA9461F26E6F600DCE49B /* EGShareViewController.h */,
+				C46AA9471F26E6F600DCE49B /* EGShareViewController.m */,
 				C46A37DE1F0E56DD009B0F37 /* Constants */,
 				C463E6891F1744A700C22840 /* Tools */,
 				C4D95A891F0C73010058F4DF /* View */,
@@ -549,6 +555,10 @@
 		C4D95A891F0C73010058F4DF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C4D28F771F21F76500CBB5EC /* EGCommonGoodsCell.h */,
+				C4D28F781F21F76500CBB5EC /* EGCommonGoodsCell.m */,
+				C4D28F7A1F21F7FE00CBB5EC /* EGCommentClassificationCell.h */,
+				C4D28F7B1F21F7FE00CBB5EC /* EGCommentClassificationCell.m */,
 				C4D95A8C1F0C73010058F4DF /* EGRootTabController.h */,
 				C4D95A8D1F0C73010058F4DF /* EGRootTabController.m */,
 				C46A37DF1F0E57F5009B0F37 /* EGNavigationController.h */,
@@ -653,6 +663,9 @@
 			children = (
 				C4D95A9F1F0C73010058F4DF /* EGTestFunctionsController.h */,
 				C4D95AA01F0C73010058F4DF /* EGTestFunctionsController.m */,
+				C46AA9491F26ED3E00DCE49B /* EGTestXIBViewController.h */,
+				C46AA94A1F26ED3E00DCE49B /* EGTestXIBViewController.m */,
+				C46AA94B1F26ED3E00DCE49B /* EGTestXIBViewController.xib */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -851,6 +864,7 @@
 			files = (
 				C4D95A641F0C70B60058F4DF /* LaunchScreen.storyboard in Resources */,
 				C4D95A611F0C70B60058F4DF /* Assets.xcassets in Resources */,
+				C46AA94D1F26ED3E00DCE49B /* EGTestXIBViewController.xib in Resources */,
 				C4F69E381F0E6BB000F3F359 /* scan_success.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1045,6 +1059,7 @@
 				C48A0E9B1F17AA81003BEAC1 /* UIBarButtonItem+BarButtonItemWithButton.m in Sources */,
 				C4FAEDD01F18AAA200F1F124 /* EGSpecialController.m in Sources */,
 				C4AED3201F1F3F8700FF1403 /* EGOptionTextCollectionViewCell.m in Sources */,
+				C46AA9481F26E6F600DCE49B /* EGShareViewController.m in Sources */,
 				C4AF603C1F1DFC4400474E97 /* EGMessagesViewController.m in Sources */,
 				91BC51991F24F6490074D865 /* EGSelectController.m in Sources */,
 				C48A0E951F17A805003BEAC1 /* EGSearchGoodsController.m in Sources */,
@@ -1061,6 +1076,7 @@
 				C460EB411F19E787004AD1C3 /* EGMethodSwizzlingHelper.m in Sources */,
 				C45BD7C31F1F06200059E71B /* CDDContext.m in Sources */,
 				C45BD7C61F1F06200059E71B /* UIView+CDD.m in Sources */,
+				C46AA94C1F26ED3E00DCE49B /* EGTestXIBViewController.m in Sources */,
 				C47541EF1F21E1940007C595 /* EGBannerCollectionViewCell.m in Sources */,
 				C4AED31A1F1F3EDD00FF1403 /* EGSpecialOptionsView.m in Sources */,
 				C4FAEDC51F188F6200F1F124 /* EGControllerTransitionGestureHelper.m in Sources */,

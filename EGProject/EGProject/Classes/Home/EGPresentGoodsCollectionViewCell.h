@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@class
+EGPresentGoodsCollectionViewCell,
+EGGoodsModel;
+
+@protocol EGPresentGoodsCollectionViewCellDelegate <NSObject>
+
+- (void)presentGoodsCollectionViewCell:(EGPresentGoodsCollectionViewCell *)cell selected:(EGGoodsModel *)model;
+
+@end
+
 @interface EGPresentGoodsCollectionViewCell : UICollectionViewCell
+
+/**delegate*/
+@property (weak, nonatomic)id<EGPresentGoodsCollectionViewCellDelegate> delegate;
 
 @end

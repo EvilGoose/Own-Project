@@ -7,9 +7,12 @@
 //
 
 #import "EGGoodsPresentController.h"
-#import "EGTestFunctionsController.h"
+#import "EGShareViewController.h"
 
 @interface EGGoodsPresentController ()
+
+/**顶部seg*/
+@property (strong, nonatomic)UISegmentedControl *topSegmentedControl;
 
 /**返回上一级*/
 @property (strong, nonatomic)UIButton *backButton;
@@ -20,6 +23,9 @@
 /**分享*/
 @property (strong, nonatomic)UIButton *shareButton;
 
+/**容器*/
+@property (strong, nonatomic)UIScrollView *container;
+
 @end
 
 @implementation EGGoodsPresentController
@@ -27,50 +33,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self initSubviews];
-}
-
-- (void)initSubviews {
-    [self.view addSubview:self.backButton];
-    [self.view addSubview:self.backTopButton];
-    [self.view addSubview:self.shareButton];
+    [self.view addSubview:self.container];
 }
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
-    [self.backButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view).offset(40);
-        make.left.equalTo(self.view).offset(12);
-     }];
-    
-    [self.shareButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view).offset(40);
-        make.right.equalTo(self.view).offset(-12);
-     }];
-    
-    [self.backTopButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view).offset(40);
-        make.right.equalTo(self.shareButton.mas_left).offset(-12);
-     }];
-
+    [self.container mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.view).offset(NAVIGATION_BAR_HEIGHT);
+        make.left.right.bottom.mas_equalTo(self.view);
+    }];
 }
 
 - (void)configureNavigationItem:(UINavigationItem *)item NavigationBar:(UINavigationBar *)bar {
-    bar.hidden = YES;
+    item.titleView = self.topSegmentedControl;
+    item.backBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.backButton];
+    item.rightBarButtonItems = @[[[UIBarButtonItem alloc]initWithCustomView:self.shareButton],
+                                 [[UIBarButtonItem alloc]initWithCustomView:self.backTopButton]];
 }
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    EGTestFunctionsController *new = [[EGTestFunctionsController alloc]init];
-    [self presentViewController:new animated:YES completion:nil];
-}
-
+ 
 - (void)userAction:(UIButton *)sender {
     if (sender == self.backButton) {
         [self.navigationController popViewControllerAnimated:YES];
     }else if (sender == self.backTopButton) {
         [self.navigationController popToRootViewControllerAnimated:YES];
     }else {
-        NSLog(@"Share action")
+        [self presentViewController:[EGShareViewController new] animated:NO completion:^{
+            
+        }];
     }
 }
 
@@ -98,6 +87,7 @@
         [_backTopButton setImage:
          [UIImage imageNamed:@"commoditydetail_ic_details_home_nor_31x31_"]
                         forState:UIControlStateNormal];
+        [_backTopButton sizeToFit];
         [_backTopButton addTarget:self action:@selector(userAction:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _backTopButton;
@@ -112,9 +102,29 @@
         [_shareButton setImage:
          [UIImage imageNamed:@"commoditydetail_detail_ic_share_pressed_31x31_"]
                       forState:UIControlStateHighlighted];
+        [_shareButton sizeToFit];
         [_shareButton addTarget:self action:@selector(userAction:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _shareButton;
+}
+
+- (UISegmentedControl *)topSegmentedControl {
+    if (!_topSegmentedControl) {
+        _topSegmentedControl = [[UISegmentedControl alloc]initWithItems:@[@"商品", @"详情"]];
+        _topSegmentedControl.tintColor = [UIColor grayColor];
+        _topSegmentedControl.selectedSegmentIndex = 0;
+        _topSegmentedControl.width = 100;
+    }
+    return _topSegmentedControl;
+}
+
+- (UIScrollView *)container {
+    if (!_container) {
+        _container = [[UIScrollView alloc]initWithFrame:self.view.bounds];
+        _container.contentSize = CGSizeMake(SCREEN_WIDTH, self.view.height * 2);
+        _container.backgroundColor = DEBUG_COLOR;
+    }
+    return _container;
 }
 
 @end

@@ -44,7 +44,7 @@
     [self.orderButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(self);
         make.top.mas_equalTo(self);
-        make.height.mas_equalTo(self.height);
+        make.height.mas_equalTo(ORDER_BAR_HEIGHT);
         make.width.mas_equalTo(80);
         
     }];

@@ -54,13 +54,13 @@ UITableViewDelegate
     [self.presentTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.view).offset(NAVIGATION_BAR_HEIGHT);
         make.left.right.mas_equalTo(self.view);
-        make.bottom.mas_equalTo(self.view).offset(- TAB_BAR_HEIGHT);
+        make.bottom.mas_equalTo(self.view);
     }];
     
     [self.orderBar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(self.view);
         make.bottom.mas_equalTo(self.view);
-        make.height.mas_equalTo(80);
+        make.height.mas_equalTo(ORDER_BAR_HEIGHT);
     }];
 }
 
@@ -138,7 +138,7 @@ UITableViewDelegate
 
 - (EGOrderBar *)orderBar {
     if (!_orderBar) {
-        _orderBar = [[EGOrderBar alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 80)];
+        _orderBar = [[EGOrderBar alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, ORDER_BAR_HEIGHT)];
         _orderBar.backgroundColor = DEBUG_COLOR;
     }
     return _orderBar;

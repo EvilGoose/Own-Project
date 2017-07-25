@@ -15,6 +15,9 @@ SINGLETON_IMPLEMENTATION(EGGoodsShelfBaseActionHandle)
 #pragma mark - delegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 1 && indexPath.row == 0) {
+        return;
+    }
     if ([self.delegate respondsToSelector:@selector(goodsShelfChooseGoods:)]) {
         [self.delegate goodsShelfChooseGoods:indexPath];
     }

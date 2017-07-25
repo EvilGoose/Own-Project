@@ -21,13 +21,15 @@
 
 #import "UIView+Extension.h"
 #import "UIBarButtonItem+BarButtonItemWithButton.h"
+#import "EGGoodsPresentController.h"
 
 @interface EGHomeViewController ()
 <
 OptionsViewDelegate,
 OptionsViewDataSource,
 UICollectionViewDelegate,
-UICollectionViewDataSource
+UICollectionViewDataSource,
+EGPresentGoodsCollectionViewCellDelegate
 >
 
 /**选项板*/
@@ -149,6 +151,13 @@ UICollectionViewDataSource
     
 }
 
+#pragma mark - EGPresentGoodsCollectionViewCell delegate
+
+- (void)presentGoodsCollectionViewCell:(EGPresentGoodsCollectionViewCell *)cell selected:(EGGoodsModel *)model {
+    EGGoodsPresentController *goodsPresentController = [EGGoodsPresentController new];
+    [self.navigationController pushViewController:goodsPresentController animated:YES];
+}
+
 #pragma mark - options view delegate & data source
 
 - (void)optionsView:(EGOptionsView *)optionsView didSelected:(NSInteger)index {
@@ -172,6 +181,7 @@ UICollectionViewDataSource
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     EGPresentGoodsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[EGPresentGoodsCollectionViewCell cellReusedID] forIndexPath:indexPath];
+    cell.delegate = self;
     cell.backgroundColor = DEBUG_COLOR;
     return cell;
 }

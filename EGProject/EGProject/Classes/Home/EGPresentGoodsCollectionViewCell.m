@@ -10,6 +10,7 @@
 #import "EGPresentGoodsCollectionViewCell.h"
 
 #import "EGGoodsShelfBaseActionHandle.h"
+#import "EGGoodsModel.h"
 
 @interface EGPresentGoodsCollectionViewCell ()
 <
@@ -36,7 +37,10 @@ GoodsShelfBaseActionProtocal
 #pragma mark - delegate
 
 - (void)goodsShelfChooseGoods:(NSIndexPath *)indexPath {
-    NSLog(@"%@", indexPath)
+    if ([self.delegate respondsToSelector:@selector(presentGoodsCollectionViewCell:selected:)]) {
+//        EGGoodsModel *model = [self.mod];
+        [self.delegate presentGoodsCollectionViewCell:self selected:nil];
+    }
 }
 
 /**需要展示的横幅数据*/
