@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		370B4599AA384A5AE931750F /* libPods-EGProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5436C5440DC9FEC413DCE1 /* libPods-EGProject.a */; };
+		915FC8631F28E35700EB26EF /* EGOrderOptionsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 915FC8621F28E35700EB26EF /* EGOrderOptionsTableViewCell.m */; };
 		91BC51961F24F6390074D865 /* EGSpecialTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 91BC51931F24F6390074D865 /* EGSpecialTableViewCell.m */; };
 		91BC51971F24F6390074D865 /* EGSpecialTopCollectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 91BC51951F24F6390074D865 /* EGSpecialTopCollectionTableViewCell.m */; };
 		91BC51991F24F6490074D865 /* EGSelectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91BC51981F24F6490074D865 /* EGSelectController.m */; };
@@ -100,6 +101,8 @@
 /* Begin PBXFileReference section */
 		1BDE30D97CDC7B43C7C138F6 /* Pods-EGProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EGProject/Pods-EGProject.debug.xcconfig"; sourceTree = "<group>"; };
 		8D5436C5440DC9FEC413DCE1 /* libPods-EGProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EGProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		915FC8611F28E35700EB26EF /* EGOrderOptionsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOrderOptionsTableViewCell.h; sourceTree = "<group>"; };
+		915FC8621F28E35700EB26EF /* EGOrderOptionsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOrderOptionsTableViewCell.m; sourceTree = "<group>"; };
 		91BC51921F24F6390074D865 /* EGSpecialTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGSpecialTableViewCell.h; sourceTree = "<group>"; };
 		91BC51931F24F6390074D865 /* EGSpecialTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGSpecialTableViewCell.m; sourceTree = "<group>"; };
 		91BC51941F24F6390074D865 /* EGSpecialTopCollectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGSpecialTopCollectionTableViewCell.h; sourceTree = "<group>"; };
@@ -431,6 +434,8 @@
 		C4AED3251F1F547800FF1403 /* Order */ = {
 			isa = PBXGroup;
 			children = (
+				915FC8611F28E35700EB26EF /* EGOrderOptionsTableViewCell.h */,
+				915FC8621F28E35700EB26EF /* EGOrderOptionsTableViewCell.m */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -1057,6 +1062,7 @@
 				C460EB471F19EE22004AD1C3 /* NSArray+Log.m in Sources */,
 				C460EB3B1F19E674004AD1C3 /* NSArray+Beyond.m in Sources */,
 				C48A0E9B1F17AA81003BEAC1 /* UIBarButtonItem+BarButtonItemWithButton.m in Sources */,
+				915FC8631F28E35700EB26EF /* EGOrderOptionsTableViewCell.m in Sources */,
 				C4FAEDD01F18AAA200F1F124 /* EGSpecialController.m in Sources */,
 				C4AED3201F1F3F8700FF1403 /* EGOptionTextCollectionViewCell.m in Sources */,
 				C46AA9481F26E6F600DCE49B /* EGShareViewController.m in Sources */,

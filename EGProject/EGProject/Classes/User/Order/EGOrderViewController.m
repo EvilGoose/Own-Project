@@ -49,7 +49,7 @@ OptionsViewDelegate
 
 - (EGOptionsView *)optionsView {
     if (!_optionsView) {
-        _optionsView = [[EGOptionsView alloc]initWithFrame:CGRectMake(0, NAVIGATION_BAR_HEIGHT, SCREEN_WIDTH, OPTIONS_VIEW_HEIGHT)];
+        _optionsView = [[EGOptionsView alloc]initWithFrame:CGRectMake(0, NAVIGATION_BAR_HEIGHT, SCREEN_WIDTH, OPTIONS_VIEW_HEIGHT) direction:UICollectionViewScrollDirectionHorizontal];
         _optionsView.backgroundColor = DEBUG_COLOR;
         _optionsView.dataSource = self;
         _optionsView.delegate = self;

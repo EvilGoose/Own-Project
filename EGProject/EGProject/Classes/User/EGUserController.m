@@ -12,11 +12,13 @@
 #import "EGUserController.h"
 #import "EGAccountInfoView.h"
 #import "EGOrderViewController.h"
+#import "EGOrderOptionsTableViewCell.h"
 
 @interface EGUserController ()
 <
 UITableViewDelegate,
-UITableViewDataSource
+UITableViewDataSource,
+EGOrderOptionsTableViewCellDelegate
 >
 
 /**用户信息*/
@@ -24,6 +26,10 @@ UITableViewDataSource
 
 /**tableView*/
 @property (strong, nonatomic)UITableView *tableView;
+
+/**选中cell*/
+@property (weak, nonatomic)__kindof UITableViewCell *selectedCell;
+
 
 @end
 
@@ -53,9 +59,15 @@ UITableViewDataSource
     bar.hidden = YES;
 }
 
+- (void)orderOptionsTableViewCell:(EGOrderOptionsTableViewCell *)cell didSelected:(OrderCellActionStyle)type {
+    self.selectedCell = cell;
+
+}
+
 #pragma mark - tableView delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.selectedCell = [tableView cellForRowAtIndexPath:indexPath];
     if (indexPath.section == 0 && indexPath.row == 0) {
         [self.navigationController pushViewController:[EGOrderViewController new] animated:YES];
     }
@@ -64,10 +76,8 @@ UITableViewDataSource
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
         return TITLE_VIEW_HEIGHT;
-    }else if (indexPath.section == 0) {
+    }else   {
         return OPTIONS_SINGLE_ROW_HEIGHT;
-    }else {
-        return OPTIONS_SINGLE_ROW_HEIGHT * 3;
     }
 }
 
@@ -86,23 +96,30 @@ UITableViewDataSource
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    if (section == 0) {
+        return 2;
+    }else {
+        return 4;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_ID];
-    if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CELL_ID];
-    }
-    
-    if (indexPath.section == 0 && indexPath.row == 0) {
+
+    if (indexPath.row == 0) {
+        UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:[UITableViewCell cellReusedID]];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        cell.textLabel.text = @"我的订单";
-    }else if (indexPath.section == 1 && indexPath.row == 0) {
-        cell.textLabel.text = @"我的服务";
+
+        if (indexPath.section == 0) {
+            cell.textLabel.text = @"我的订单";
+        }else if (indexPath.row == 0) {
+            cell.textLabel.text = @"我的服务";
+        }
+        return cell;
+    }else {
+        EGOrderOptionsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[EGOrderOptionsTableViewCell cellReusedID]];
+        cell.delegate = self;
+        return cell;
     }
-    
-    return cell;
 }
 
 #pragma mark - lazy
@@ -126,7 +143,8 @@ UITableViewDataSource
 - (UITableView *)tableView {
     if (!_tableView) {
         _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
-        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CELL_ID];
+        [_tableView registerClass:[EGOrderOptionsTableViewCell class] forCellReuseIdentifier:[EGOrderOptionsTableViewCell cellReusedID]];
+        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:[UITableViewCell cellReusedID]];
         _tableView.contentInset = UIEdgeInsetsMake(200, 0, 0, 0);
         _tableView.contentOffset = CGPointMake(0, -200);
         _tableView.showsVerticalScrollIndicator = NO;

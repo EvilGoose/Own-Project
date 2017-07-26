@@ -49,7 +49,6 @@ UICollectionViewDelegate
     return self;
 }
 
-
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         NSAssert(!self, @"Could not initial with this method %s", __func__);
