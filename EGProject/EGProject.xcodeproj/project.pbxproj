@@ -14,6 +14,15 @@
 		91BC51991F24F6490074D865 /* EGSelectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91BC51981F24F6490074D865 /* EGSelectController.m */; };
 		91BC519E1F24F66D0074D865 /* EGOfficialRecommendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91BC519B1F24F66D0074D865 /* EGOfficialRecommendController.m */; };
 		91BC519F1F24F66D0074D865 /* EGSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 91BC519D1F24F66D0074D865 /* EGSearchBar.m */; };
+		91D1CC62216DF87700211E0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D1CC61216DF87700211E0C /* AppDelegate.m */; };
+		91D1CC65216DF87700211E0C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D1CC64216DF87700211E0C /* ViewController.m */; };
+		91D1CC68216DF87700211E0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91D1CC66216DF87700211E0C /* Main.storyboard */; };
+		91D1CC6A216DF89700211E0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91D1CC69216DF89700211E0C /* Assets.xcassets */; };
+		91D1CC6D216DF89700211E0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91D1CC6B216DF89700211E0C /* LaunchScreen.storyboard */; };
+		91D1CC70216DF89700211E0C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D1CC6F216DF89700211E0C /* main.m */; };
+		91D1CC79216DFA1A00211E0C /* EGDataHandle1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D1CC78216DFA1A00211E0C /* EGDataHandle1ViewController.m */; };
+		91D1CC7C216DFA2500211E0C /* EGDataHandle2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D1CC7B216DFA2500211E0C /* EGDataHandle2ViewController.m */; };
+		91D1CC80216DFC3B00211E0C /* EGAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D1CC7F216DFC3B00211E0C /* EGAPIManager.m */; };
 		B3277A908061E0D1B3A7BEEA /* libPods-EGProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E97E4415D633ABF5111C04AA /* libPods-EGProjectTests.a */; };
 		C41131E11F261DAA00DAE972 /* EGOrderBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C41131E01F261DAA00DAE972 /* EGOrderBar.m */; };
 		C41131E41F261FFD00DAE972 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C41131E31F261FFD00DAE972 /* UIImage+Extension.m */; };
@@ -112,6 +121,23 @@
 		91BC519B1F24F66D0074D865 /* EGOfficialRecommendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOfficialRecommendController.m; sourceTree = "<group>"; };
 		91BC519C1F24F66D0074D865 /* EGSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGSearchBar.h; sourceTree = "<group>"; };
 		91BC519D1F24F66D0074D865 /* EGSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGSearchBar.m; sourceTree = "<group>"; };
+		91D1CC5E216DF87600211E0C /* DistributeDataHandle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DistributeDataHandle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		91D1CC60216DF87700211E0C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		91D1CC61216DF87700211E0C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		91D1CC63216DF87700211E0C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		91D1CC64216DF87700211E0C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		91D1CC67216DF87700211E0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		91D1CC69216DF89700211E0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		91D1CC6C216DF89700211E0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		91D1CC6E216DF89700211E0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91D1CC6F216DF89700211E0C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		91D1CC77216DFA1A00211E0C /* EGDataHandle1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGDataHandle1ViewController.h; sourceTree = "<group>"; };
+		91D1CC78216DFA1A00211E0C /* EGDataHandle1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGDataHandle1ViewController.m; sourceTree = "<group>"; };
+		91D1CC7A216DFA2500211E0C /* EGDataHandle2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGDataHandle2ViewController.h; sourceTree = "<group>"; };
+		91D1CC7B216DFA2500211E0C /* EGDataHandle2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGDataHandle2ViewController.m; sourceTree = "<group>"; };
+		91D1CC7D216DFB0E00211E0C /* EGHandleDataProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGHandleDataProtocol.h; sourceTree = "<group>"; };
+		91D1CC7E216DFC3B00211E0C /* EGAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGAPIManager.h; sourceTree = "<group>"; };
+		91D1CC7F216DFC3B00211E0C /* EGAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGAPIManager.m; sourceTree = "<group>"; };
 		A17F8352A51A27CB4C5A1BD7 /* Pods-EGProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EGProjectTests/Pods-EGProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		A98F6E4E5E5FF6BAFDF37C4E /* Pods-EGProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EGProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EGProjectUITests/Pods-EGProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C41131DF1F261DAA00DAE972 /* EGOrderBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOrderBar.h; sourceTree = "<group>"; };
@@ -252,6 +278,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		91D1CC5B216DF87600211E0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4D95A4E1F0C70B60058F4DF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -300,6 +333,29 @@
 				A98F6E4E5E5FF6BAFDF37C4E /* Pods-EGProjectUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		91D1CC5F216DF87600211E0C /* DistributeDataHandle */ = {
+			isa = PBXGroup;
+			children = (
+				91D1CC60216DF87700211E0C /* AppDelegate.h */,
+				91D1CC61216DF87700211E0C /* AppDelegate.m */,
+				91D1CC63216DF87700211E0C /* ViewController.h */,
+				91D1CC64216DF87700211E0C /* ViewController.m */,
+				91D1CC7D216DFB0E00211E0C /* EGHandleDataProtocol.h */,
+				91D1CC7E216DFC3B00211E0C /* EGAPIManager.h */,
+				91D1CC7F216DFC3B00211E0C /* EGAPIManager.m */,
+				91D1CC77216DFA1A00211E0C /* EGDataHandle1ViewController.h */,
+				91D1CC78216DFA1A00211E0C /* EGDataHandle1ViewController.m */,
+				91D1CC7A216DFA2500211E0C /* EGDataHandle2ViewController.h */,
+				91D1CC7B216DFA2500211E0C /* EGDataHandle2ViewController.m */,
+				91D1CC66216DF87700211E0C /* Main.storyboard */,
+				91D1CC69216DF89700211E0C /* Assets.xcassets */,
+				91D1CC6B216DF89700211E0C /* LaunchScreen.storyboard */,
+				91D1CC6E216DF89700211E0C /* Info.plist */,
+				91D1CC6F216DF89700211E0C /* main.m */,
+			);
+			path = DistributeDataHandle;
 			sourceTree = "<group>";
 		};
 		C458B78D1F2094D50080DFAE /* Common */ = {
@@ -473,6 +529,7 @@
 				C4D95A531F0C70B60058F4DF /* EGProject */,
 				C4D95A6D1F0C70B60058F4DF /* EGProjectTests */,
 				C4D95A781F0C70B60058F4DF /* EGProjectUITests */,
+				91D1CC5F216DF87600211E0C /* DistributeDataHandle */,
 				C4D95A521F0C70B60058F4DF /* Products */,
 				C4D95AA51F0C73010058F4DF /* Resources */,
 				55B31262B05D695648A8A40C /* Pods */,
@@ -486,6 +543,7 @@
 				C4D95A511F0C70B60058F4DF /* EGProject.app */,
 				C4D95A6A1F0C70B60058F4DF /* EGProjectTests.xctest */,
 				C4D95A751F0C70B60058F4DF /* EGProjectUITests.xctest */,
+				91D1CC5E216DF87600211E0C /* DistributeDataHandle.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -751,6 +809,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		91D1CC5D216DF87600211E0C /* DistributeDataHandle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91D1CC71216DF89700211E0C /* Build configuration list for PBXNativeTarget "DistributeDataHandle" */;
+			buildPhases = (
+				91D1CC5A216DF87600211E0C /* Sources */,
+				91D1CC5B216DF87600211E0C /* Frameworks */,
+				91D1CC5C216DF87600211E0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DistributeDataHandle;
+			productName = DistributeDataHandle;
+			productReference = 91D1CC5E216DF87600211E0C /* DistributeDataHandle.app */;
+			productType = "com.apple.product-type.application";
+		};
 		C4D95A501F0C70B60058F4DF /* EGProject */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4D95A7E1F0C70B60058F4DF /* Build configuration list for PBXNativeTarget "EGProject" */;
@@ -823,9 +898,14 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = EGMade;
 				TargetAttributes = {
+					91D1CC5D216DF87600211E0C = {
+						CreatedOnToolsVersion = 10.0;
+						DevelopmentTeam = NXUQZ8YP3C;
+						ProvisioningStyle = Automatic;
+					};
 					C4D95A501F0C70B60058F4DF = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 3RQ4UGLT33;
+						DevelopmentTeam = NXUQZ8YP3C;
 						ProvisioningStyle = Automatic;
 					};
 					C4D95A691F0C70B60058F4DF = {
@@ -858,11 +938,22 @@
 				C4D95A501F0C70B60058F4DF /* EGProject */,
 				C4D95A691F0C70B60058F4DF /* EGProjectTests */,
 				C4D95A741F0C70B60058F4DF /* EGProjectUITests */,
+				91D1CC5D216DF87600211E0C /* DistributeDataHandle */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		91D1CC5C216DF87600211E0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91D1CC6D216DF89700211E0C /* LaunchScreen.storyboard in Resources */,
+				91D1CC6A216DF89700211E0C /* Assets.xcassets in Resources */,
+				91D1CC68216DF87700211E0C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4D95A4F1F0C70B60058F4DF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1029,6 +1120,19 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		91D1CC5A216DF87600211E0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91D1CC65216DF87700211E0C /* ViewController.m in Sources */,
+				91D1CC79216DFA1A00211E0C /* EGDataHandle1ViewController.m in Sources */,
+				91D1CC70216DF89700211E0C /* main.m in Sources */,
+				91D1CC7C216DFA2500211E0C /* EGDataHandle2ViewController.m in Sources */,
+				91D1CC80216DFC3B00211E0C /* EGAPIManager.m in Sources */,
+				91D1CC62216DF87700211E0C /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4D95A4D1F0C70B60058F4DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1131,6 +1235,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		91D1CC66216DF87700211E0C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91D1CC67216DF87700211E0C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		91D1CC6B216DF89700211E0C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91D1CC6C216DF89700211E0C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		C4D95A621F0C70B60058F4DF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1142,6 +1262,65 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		91D1CC72216DF89700211E0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NXUQZ8YP3C;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = DistributeDataHandle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = evilgoose.com.cn.hb.DistributeDataHandle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		91D1CC73216DF89700211E0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NXUQZ8YP3C;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = DistributeDataHandle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = evilgoose.com.cn.hb.DistributeDataHandle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		C4D95A7C1F0C70B60058F4DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1239,7 +1418,7 @@
 			baseConfigurationReference = 1BDE30D97CDC7B43C7C138F6 /* Pods-EGProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3RQ4UGLT33;
+				DEVELOPMENT_TEAM = NXUQZ8YP3C;
 				INFOPLIST_FILE = EGProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1253,7 +1432,7 @@
 			baseConfigurationReference = D2708E533CFA0CA5D1C47C18 /* Pods-EGProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3RQ4UGLT33;
+				DEVELOPMENT_TEAM = NXUQZ8YP3C;
 				INFOPLIST_FILE = EGProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1319,6 +1498,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		91D1CC71216DF89700211E0C /* Build configuration list for PBXNativeTarget "DistributeDataHandle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91D1CC72216DF89700211E0C /* Debug */,
+				91D1CC73216DF89700211E0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C4D95A4C1F0C70B60058F4DF /* Build configuration list for PBXProject "EGProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
