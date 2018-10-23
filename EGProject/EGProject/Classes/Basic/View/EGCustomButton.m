@@ -7,6 +7,7 @@
 //
 
 #import "EGCustomButton.h"
+#import <Masonry.h>
 
 @interface EGCustomButton()
 

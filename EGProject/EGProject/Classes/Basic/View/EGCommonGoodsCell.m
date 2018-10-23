@@ -8,6 +8,7 @@
 
 #import "EGCommonGoodsCell.h"
 #import "EGGoodsModel.h"
+#import <Masonry.h>
 
 @interface EGCommonGoodsCell ()
 

@@ -471,13 +471,6 @@
 			name = Constants;
 			sourceTree = "<group>";
 		};
-		C46A37E21F0E66A9009B0F37 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
 		C4AED3241F1F546F00FF1403 /* Order */ = {
 			isa = PBXGroup;
 			children = (
@@ -596,8 +589,6 @@
 				C4D95A951F0C73010058F4DF /* Select */,
 				C4D95A981F0C73010058F4DF /* ShoppingCar */,
 				C4D95AA11F0C73010058F4DF /* User */,
-				C46A37E21F0E66A9009B0F37 /* Login */,
-				C4D95AA41F0C73010058F4DF /* Welcome */,
 				C4D95A9E1F0C73010058F4DF /* Tests */,
 			);
 			path = Classes;
@@ -748,13 +739,6 @@
 			path = User;
 			sourceTree = "<group>";
 		};
-		C4D95AA41F0C73010058F4DF /* Welcome */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Welcome;
-			sourceTree = "<group>";
-		};
 		C4D95AA51F0C73010058F4DF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -834,7 +818,6 @@
 				C4D95A4D1F0C70B60058F4DF /* Sources */,
 				C4D95A4E1F0C70B60058F4DF /* Frameworks */,
 				C4D95A4F1F0C70B60058F4DF /* Resources */,
-				BA9AF660A89992CE4313FD16 /* [CP] Embed Pods Frameworks */,
 				2E92B37A3C059A7B58C2A8DA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -854,8 +837,6 @@
 				C4D95A661F0C70B60058F4DF /* Sources */,
 				C4D95A671F0C70B60058F4DF /* Frameworks */,
 				C4D95A681F0C70B60058F4DF /* Resources */,
-				2DBCADF80B68662B846A5267 /* [CP] Embed Pods Frameworks */,
-				8271CA136E3F8D67E649BDA8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -875,8 +856,6 @@
 				C4D95A711F0C70B60058F4DF /* Sources */,
 				C4D95A721F0C70B60058F4DF /* Frameworks */,
 				C4D95A731F0C70B60058F4DF /* Resources */,
-				90AB83556AA8FF1E13FCC4B9 /* [CP] Embed Pods Frameworks */,
-				269AC49982915B8A375E665D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -988,43 +967,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EGProjectTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		269AC49982915B8A375E665D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EGProjectUITests/Pods-EGProjectUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2DBCADF80B68662B846A5267 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EGProjectTests/Pods-EGProjectTests-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2E92B37A3C059A7B58C2A8DA /* [CP] Copy Pods Resources */ = {
@@ -1033,9 +985,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EGProject/Pods-EGProject-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1048,13 +1003,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EGProjectUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6CC1FC85D75386F967762481 /* [CP] Check Pods Manifest.lock */ = {
@@ -1063,58 +1021,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EGProject-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		8271CA136E3F8D67E649BDA8 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EGProjectTests/Pods-EGProjectTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		90AB83556AA8FF1E13FCC4B9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EGProjectUITests/Pods-EGProjectUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BA9AF660A89992CE4313FD16 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EGProject/Pods-EGProject-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

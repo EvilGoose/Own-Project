@@ -7,6 +7,7 @@
 //
 
 #import "EGAccountInfoView.h"
+#import <Masonry.h>
 
 @interface EGAccountInfoView ()
 

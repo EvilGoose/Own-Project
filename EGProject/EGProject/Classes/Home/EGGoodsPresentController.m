@@ -8,6 +8,7 @@
 
 #import "EGGoodsPresentController.h"
 #import "EGShareViewController.h"
+#import <Masonry.h>
 
 @interface EGGoodsPresentController ()
 

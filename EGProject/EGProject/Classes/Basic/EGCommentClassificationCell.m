@@ -7,6 +7,7 @@
 //
 
 #import "EGCommentClassificationCell.h"
+#import <Masonry.h>
 
 @interface EGCommentClassificationCell ()
 

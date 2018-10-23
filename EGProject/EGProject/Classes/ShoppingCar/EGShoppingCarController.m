@@ -12,6 +12,7 @@
 
 #import "EGGoodsPresentController.h"
 #import "EGOrderBar.h"
+#import <Masonry.h>
 
 @interface EGShoppingCarController ()
 <
@@ -51,6 +52,7 @@ UITableViewDelegate
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
+#import <Masonry.h>
     [self.presentTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.view).offset(NAVIGATION_BAR_HEIGHT);
         make.left.right.mas_equalTo(self.view);

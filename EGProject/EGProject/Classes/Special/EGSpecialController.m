@@ -10,6 +10,7 @@
 
 #import "EGSpecialTopCollectionTableViewCell.h"
 #import "EGSpecialTableViewCell.h"
+#import <Masonry.h>
 
  @interface EGSpecialController ()
  <

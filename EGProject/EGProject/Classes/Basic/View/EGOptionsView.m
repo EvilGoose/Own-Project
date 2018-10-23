@@ -9,6 +9,7 @@
 #import "EGOptionsView.h"
 #import "UIView+Extension.h"
 #import "EGOptionTextCollectionViewCell.h"
+#import <Masonry.h>
 
 #define BOTTOM_INDICATOR_HEIGHT 2
 #define CELL_WIDTH 60

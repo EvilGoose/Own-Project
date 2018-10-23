@@ -11,6 +11,7 @@
 #define Navigation_Background_Color RGBA_COLOR(222, 222, 222, 1)
 
 #import "EGBasicViewController.h"
+#import <Masonry.h>
 
 @interface EGBasicViewController ()
 <
@@ -60,7 +61,11 @@ UINavigationControllerDelegate
 
     [self.customNavigationBar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.equalTo(self.view);
-        make.height.equalTo(@(NAVIGATION_BAR_HEIGHT));
+        if (@available(iOS 11, *)) {
+            
+        }else {
+            make.height.equalTo(@(NAVIGATION_BAR_HEIGHT));
+        }
     }];
     
     [self.bottomSeperator mas_makeConstraints:^(MASConstraintMaker *make) {

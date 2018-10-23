@@ -7,6 +7,7 @@
 //
 
 #import "EGOptionTextCollectionViewCell.h"
+#import <Masonry.h>
 
 @implementation EGOptionTextCollectionViewCell
 

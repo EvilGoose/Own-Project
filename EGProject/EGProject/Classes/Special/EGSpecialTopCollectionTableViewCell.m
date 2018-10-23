@@ -7,6 +7,7 @@
 //
 
 #import "EGSpecialTopCollectionTableViewCell.h"
+#import <Masonry.h>
 
 @interface EGSpecialTopCollectionTableViewCell ()
 <

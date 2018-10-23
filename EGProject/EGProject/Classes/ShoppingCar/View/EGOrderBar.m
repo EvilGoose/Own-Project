@@ -8,6 +8,7 @@
 
 #import "EGOrderBar.h"
 #import "UIImage+Extension.h"
+#import <Masonry.h>
 
 @interface EGOrderBar ()
 
